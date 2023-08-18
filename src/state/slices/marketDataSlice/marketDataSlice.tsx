@@ -19,7 +19,7 @@ import type {
   MarketDataState,
 } from 'state/slices/marketDataSlice/types'
 
-import { foxEthLpAssetId } from '../opportunitiesSlice/constants'
+import { furyEthLpAssetId } from '../opportunitiesSlice/constants'
 import type { MarketDataById } from './types'
 
 const initialState: MarketDataState = {
@@ -37,9 +37,9 @@ const initialState: MarketDataState = {
 
 const shouldIgnoreAsset = (assetId: AssetId | string): boolean => {
   // TODO: remove this once single and multi sided delegation abstraction is implemented
-  // since foxEthLpAsset market data is monkey-patched, requesting its price history
+  // since furyEthLpAsset market data is monkey-patched, requesting its price history
   // will return an empty array which overrides the patch.
-  const ignoreAssetIds: AssetId[] = [foxEthLpAssetId]
+  const ignoreAssetIds: AssetId[] = [furyEthLpAssetId]
   return ignoreAssetIds.includes(assetId) || isOsmosisLpAsset(fromAssetId(assetId).assetReference)
 }
 

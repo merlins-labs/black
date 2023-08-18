@@ -1,8 +1,8 @@
 import type { AssetId } from '@shapeshiftoss/caip'
-import { ethAssetId, foxAssetId } from '@shapeshiftoss/caip'
+import { ethAssetId, furyAssetId } from '@shapeshiftoss/caip'
 import { clearState, store } from 'state/store'
 
-import { foxEthLpAssetId } from './constants'
+import { furyEthLpAssetId } from './constants'
 import {
   fauxmesAccountId,
   gomesAccountId,
@@ -36,15 +36,15 @@ describe('opportunitiesSlice', () => {
           byId: {
             [mockLpContractOne]: {
               // The LP token AssetId
-              assetId: foxEthLpAssetId,
-              id: foxEthLpAssetId,
-              name: 'ETH/FOX Pool',
-              underlyingAssetId: foxEthLpAssetId,
+              assetId: furyEthLpAssetId,
+              id: furyEthLpAssetId,
+              name: 'ETH/FURY Pool',
+              underlyingAssetId: furyEthLpAssetId,
               provider: DefiProvider.UniV2,
               tvl: '424242',
               apy: '0.42',
               type: DefiType.LiquidityPool,
-              underlyingAssetIds: [foxAssetId, ethAssetId] as [AssetId, AssetId],
+              underlyingAssetIds: [furyAssetId, ethAssetId] as [AssetId, AssetId],
               underlyingAssetRatiosBaseUnit: ['5000000000000000', '202200000000000000000'] as [
                 string,
                 string,
@@ -65,15 +65,15 @@ describe('opportunitiesSlice', () => {
           byId: {
             [mockLpContractOne]: {
               // The LP token AssetId
-              assetId: foxEthLpAssetId,
-              id: foxEthLpAssetId,
-              name: 'ETH/FOX Pool',
-              underlyingAssetId: foxEthLpAssetId,
+              assetId: furyEthLpAssetId,
+              id: furyEthLpAssetId,
+              name: 'ETH/FURY Pool',
+              underlyingAssetId: furyEthLpAssetId,
               provider: DefiProvider.UniV2,
               tvl: '424242',
               apy: '0.42',
               type: DefiType.LiquidityPool,
-              underlyingAssetIds: [foxAssetId, ethAssetId] as [AssetId, AssetId],
+              underlyingAssetIds: [furyAssetId, ethAssetId] as [AssetId, AssetId],
               underlyingAssetRatiosBaseUnit: ['5000000000000000', '202200000000000000000'] as [
                 string,
                 string,
@@ -92,15 +92,15 @@ describe('opportunitiesSlice', () => {
           byId: {
             [mockLpContractTwo]: {
               // The LP token AssetId
-              assetId: foxEthLpAssetId,
-              id: foxEthLpAssetId,
-              name: 'ETH/FOX Pool',
-              underlyingAssetId: foxEthLpAssetId,
+              assetId: furyEthLpAssetId,
+              id: furyEthLpAssetId,
+              name: 'ETH/FURY Pool',
+              underlyingAssetId: furyEthLpAssetId,
               provider: DefiProvider.UniV2,
               tvl: '424242',
               apy: '0.42',
               type: DefiType.LiquidityPool,
-              underlyingAssetIds: [foxAssetId, ethAssetId] as [AssetId, AssetId],
+              underlyingAssetIds: [furyAssetId, ethAssetId] as [AssetId, AssetId],
               underlyingAssetRatiosBaseUnit: ['5000000000000000', '202200000000000000000'] as [
                 string,
                 string,

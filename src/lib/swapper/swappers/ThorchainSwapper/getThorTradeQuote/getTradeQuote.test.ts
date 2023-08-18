@@ -3,7 +3,7 @@ import type { AxiosResponse, AxiosStatic } from 'axios'
 
 import type { GetTradeQuoteInput } from '../../../api'
 import { SwapperName } from '../../../api'
-import { ETH, FOX_MAINNET } from '../../utils/test-data/assets'
+import { ETH, FURY_MAINNET } from '../../utils/test-data/assets'
 import { setupQuote } from '../../utils/test-data/setupSwapQuote'
 import { getThorTxInfo } from '../evm/utils/getThorTxData'
 import type { InboundAddressResponse, ThornodePoolResponse } from '../types'
@@ -62,7 +62,7 @@ const expectedQuoteResponse: ThorEvmTradeQuote = {
       rate: '144114.94366197183098591549',
       sources: [{ name: SwapperName.Thorchain, proportion: '1' }],
       buyAsset: ETH,
-      sellAsset: FOX_MAINNET,
+      sellAsset: FURY_MAINNET,
       accountNumber: 0,
     },
   ],
@@ -121,7 +121,7 @@ describe('getTradeQuote', () => {
       ...quoteInput,
       sellAmountIncludingProtocolFeesCryptoBaseUnit: '713014679420',
       buyAsset: ETH,
-      sellAsset: FOX_MAINNET,
+      sellAsset: FURY_MAINNET,
     }
 
     const maybeTradeQuote = await getThorTradeQuote(input, {

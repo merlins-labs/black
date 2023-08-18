@@ -21,9 +21,9 @@ import zrxTradeUsdcToOp from './mockData/zrxTradeUsdcToOp'
 const mockedApi = jest.mocked(new V1Api())
 
 const tokenMetadata: evm.TokenMetadata = {
-  name: 'Foxy',
-  description: 'The foxiest Fox',
-  media: { url: 'http://foxy.fox', type: 'image' },
+  name: 'Jinx',
+  description: 'The furyiest Fury',
+  media: { url: 'http://jinx.fury', type: 'image' },
 }
 
 mockedApi.getTokenMetadata = jest.fn().mockResolvedValue(tokenMetadata)

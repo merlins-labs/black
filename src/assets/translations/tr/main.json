@@ -281,22 +281,22 @@
         "emptyWithdraws": "Bekleyen staking istekleri burada gösterilir.",
         "availableDate": "kullanılabilir %{date}"
       },
-      "foxyOverview": {
-        "header": "FOXy'yi kazanmak için FOX yatırın",
-        "body": "FOXy, FOX fiyatına sabitlenmiş bir yeniden değerleme tokenidir. Stake edilmiş FOX, mümkün olan en iyi getiriyi elde etmek için farklı DeFi protokollerinde çalışır.",
+      "jinxOverview": {
+        "header": "FURYy'yi kazanmak için FURY yatırın",
+        "body": "FURYy, FURY fiyatına sabitlenmiş bir yeniden değerleme tokenidir. Stake edilmiş FURY, mümkün olan en iyi getiriyi elde etmek için farklı DeFi protokollerinde çalışır.",
         "rewards": "Kazandığınız ödüller otomatik olarak tahakkuk edecektir.",
-        "cta": "Şimdi FOX Yatırın",
-        "foxyBalance": "FOXy Bakiyesi",
+        "cta": "Şimdi FURY Yatırın",
+        "jinxBalance": "FURYy Bakiyesi",
         "withdrawals": "Para Çekme",
         "emptyWithdraws": "Bekleyen veya etkin para çekme işlemleri burada gösterilir.",
         "availableDate": "kullanılabilir %{date}"
       },
-      "foxFarmingOverview": {
-        "header": "Kazanmak için ETH-FOX LP jetonlarını %{opportunity}'e yatırın",
-        "body": "Bonus FOX ödülleri kazanmak için likidite jetonlarınızı onaylayın ve stake edin.",
+      "furyFarmingOverview": {
+        "header": "Kazanmak için ETH-FURY LP jetonlarını %{opportunity}'e yatırın",
+        "body": "Bonus FURY ödülleri kazanmak için likidite jetonlarınızı onaylayın ve stake edin.",
         "rewards": "Kazandığınız ödüller otomatik olarak tahakkuk edecektir.",
-        "cta": "Şimdi ETH-FOX LP jetonlarını Yatırın",
-        "foxFarmingBalance": "ETH-FOX LP token Bakiyesi",
+        "cta": "Şimdi ETH-FURY LP jetonlarını Yatırın",
+        "furyFarmingBalance": "ETH-FURY LP token Bakiyesi",
         "withdrawals": "Para çekme",
         "emptyWithdraws": "Bekleyen veya etkin para çekme işlemleri burada gösterilir.",
         "availableDate": "kullanılabilir %{date}"
@@ -407,7 +407,7 @@
     "earnBalance": "Kazanç Bakiyesi",
     "rewardsBalance": "Ödül Bakiyesi",
     "earnBody": "Varlıklarınızı stake ederek veya bir DeFi stratejisine yatırarak pasif gelir elde edin.",
-    "clickHereToEarn": "ETH-FOX likidite havuzu belirteçlerinizi biriktirerek %{apr} APR* kazanmak için burayı tıklayın",
+    "clickHereToEarn": "ETH-FURY likidite havuzu belirteçlerinizi biriktirerek %{apr} APR* kazanmak için burayı tıklayın",
     "overview": "Genel Bakış",
     "myPositions": "Pozisyonlarım",
     "myPositionsBody": "Aktif pozisyonlarınız burada görünecektir.",
@@ -502,7 +502,7 @@
     "overview": "Genel Bakış",
     "transactions": "İşlemler",
     "tradeHistory": "Takas Geçmişi",
-    "foxToken": "FOX Fırsatları",
+    "furyToken": "FURY Fırsatları",
     "dApps": "dApps",
     "featureFlags": "Özellik Bayrakları",
     "demoMode": "Deneme Modu",
@@ -515,8 +515,8 @@
     "buyCrypto": "Kripto Al/Sat",
     "buyCryptoShort": "Al/Sat",
     "arkeo": "Arkeo Airdrop",
-    "foxMissions": "FOX Görevleri",
-    "foxMissionsShort": "Görevler"
+    "furyMissions": "FURY Görevleri",
+    "furyMissionsShort": "Görevler"
   },
   "transactionRow": {
     "send": "Gönderilen",
@@ -567,7 +567,7 @@
       "thor": {
         "transferOut": "Dışa Aktar"
       },
-      "foxy": {
+      "jinx": {
         "stake": "Stake Et",
         "unstake": "Stake Kaldır",
         "instantUnstake": "Stake'i Anında Geri Al",
@@ -1614,16 +1614,16 @@
     "transfers": "Transferler"
   },
   "plugins": {
-    "foxPage": {
+    "furyPage": {
       "buyAssetOnCoinbase": "Coinbase'de %{assetSymbol} satın alın",
-      "totalFoxValue": "Toplam FOX Değeri",
-      "foxToken": "ShapeShift %{assetSymbol} Jetonu",
-      "foxDescription": "2019'dan bu yana, ShapeShift FOX Token'ımız, kullanıcılara sürekli genişleyen bir fayda ve avantajlar dünyası sunuyor. Bugün, ERC-20 yönetişim belirtecimiz, oylarınızla ShapeShift'in geleceğini etkilemenizi sağlamakla kalmıyor, aynı zamanda sürekli genişleyen bir yatırım fırsatları evrenine de sahipsiniz. Burada FOX varlıklarınıza yatırım yapın, izleyin ve yönetin.",
+      "totalFuryValue": "Toplam FURY Değeri",
+      "furyToken": "ShapeShift %{assetSymbol} Jetonu",
+      "furyDescription": "2019'dan bu yana, ShapeShift FURY Token'ımız, kullanıcılara sürekli genişleyen bir fayda ve avantajlar dünyası sunuyor. Bugün, ERC-20 yönetişim belirtecimiz, oylarınızla ShapeShift'in geleceğini etkilemenizi sağlamakla kalmıyor, aynı zamanda sürekli genişleyen bir yatırım fırsatları evrenine de sahipsiniz. Burada FURY varlıklarınıza yatırım yapın, izleyin ve yönetin.",
       "getAsset": "%{assetSymbol} alın",
       "trade": "Takas",
       "receive": "Al",
       "mainStakingTitle": "%{assetSymbol} Jeton Stake Etme",
-      "mainStakingDescription": "FOX ödüllerini kazanmak için FOX'unuzu tek taraflı staking sözleşmelerinde çalıştırın. (FOX, stake edilirken yönetişimde hala kullanılabilir, ancak bunun dışında staking sırasında sözleşmeye kilitlenir.)",
+      "mainStakingDescription": "FURY ödüllerini kazanmak için FURY'unuzu tek taraflı staking sözleşmelerinde çalıştırın. (FURY, stake edilirken yönetişimde hala kullanılabilir, ancak bunun dışında staking sırasında sözleşmeye kilitlenir.)",
       "tvl": "TVL",
       "currentApy": "Mevcut APY",
       "balance": "Bakiye",
@@ -1633,30 +1633,30 @@
       "tradingUnavailable": "%{assetSymbol}, ShapeShift'te henüz takas edilemez. ElasticSwap'te %{assetSymbol} ile işlem yapabilirsiniz.",
       "tradeOnElasticSwap": "ElasticSwap'te %{assetSymbol} ile işlem yapın",
       "otherOpportunitiesTitle": {
-        "FOX": "Diğer Fırsatlar",
-        "FOXy": "Fırsatlar"
+        "FURY": "Diğer Fırsatlar",
+        "FURYy": "Fırsatlar"
       },
       "otherOpportunitiesDescription": {
-        "FOX": "Likidite sağlama, verim için çiftçilik yapma, borç verme ve borç alma için birçok fırsatı keşfedin. Daha fazla bilgi edinmek ve FOX'unuzu sizin için çalıştırmaya başlamak üzere ilgili harici siteleri ziyaret etmek için aşağıdaki \"Başlayın\" bağlantılarını tıklayın.",
-        "FOXy": "Sektörün hem getiri hem de kâr ödülleri sunan ilk DAO yeniden temellendirme belirteci olan FOXy'yi hızlı ve kolay bir şekilde satın alın."
+        "FURY": "Likidite sağlama, verim için çiftçilik yapma, borç verme ve borç alma için birçok fırsatı keşfedin. Daha fazla bilgi edinmek ve FURY'unuzu sizin için çalıştırmaya başlamak üzere ilgili harici siteleri ziyaret etmek için aşağıdaki \"Başlayın\" bağlantılarını tıklayın.",
+        "FURYy": "Sektörün hem getiri hem de kâr ödülleri sunan ilk DAO yeniden temellendirme belirteci olan FURYy'yi hızlı ve kolay bir şekilde satın alın."
       },
       "liquidityPools": "Likidite Havuzları",
       "farming": "Çiftçilik",
       "borrowingAndLending": "Borç Alma ve Verme",
       "governanceTitle": "Yönetim",
-      "governanceDescription": "Bir FOX sahibi olarak ShapeShift'in geleceğinde söz sahibi olabilirsiniz. Aşağıda, belirteç sahipleri tarafından oylanan aktif veya yakın zamanda geçen DAO teklifleri bulunmaktadır.",
+      "governanceDescription": "Bir FURY sahibi olarak ShapeShift'in geleceğinde söz sahibi olabilirsiniz. Aşağıda, belirteç sahipleri tarafından oylanan aktif veya yakın zamanda geçen DAO teklifleri bulunmaktadır.",
       "seeAllProposals": "Tüm Teklifleri Gör",
       "availableToTradeOn": "Takas Edilebilir",
       "dex": "DEX",
       "centralized": "Merkezileştirilmiş",
       "dappBack": {
-        "title": "✨ FOX ödüllerini ve daha fazlasını alın! ✨",
-        "body": "DappBack'teki görevleri tamamlayarak FOX ödülleri kazanın",
+        "title": "✨ FURY ödüllerini ve daha fazlasını alın! ✨",
+        "body": "DappBack'teki görevleri tamamlayarak FURY ödülleri kazanın",
         "cta": "DappBack'i Başlatın"
       },
       "bondProtocol": {
-        "title": "FOX'u İndirimli Satın Alın!",
-        "body": "BondProtocol ile FOX'u indirimli satın alın",
+        "title": "FURY'u İndirimli Satın Alın!",
+        "body": "BondProtocol ile FURY'u indirimli satın alın",
         "cta": "BondProtocol'ü Başlat"
       }
     },
@@ -1925,28 +1925,28 @@
     },
     "lp": {
       "title": "%{asset1}/%{asset2} Sağlayıcılar",
-      "body": "Elinizde %{asset1} ve %{asset2} var mı? %{apy} APR kazanmak için Uniswap V2 Havuzuna likidite sağlayın. AYRICA, sahip olduğunuz FOX/ETH LP tokenlarındaki temel FOX, Arkeo airdrop için uygun olacaktır.",
+      "body": "Elinizde %{asset1} ve %{asset2} var mı? %{apy} APR kazanmak için Uniswap V2 Havuzuna likidite sağlayın. AYRICA, sahip olduğunuz FURY/ETH LP tokenlarındaki temel FURY, Arkeo airdrop için uygun olacaktır.",
       "cta": "Likidite Ekleyin"
     },
-    "foxTokenHolders": {
-      "title": "FOX Token Sahipleri",
-      "body": "Cüzdanda tutulan FOX token'ları. Çantanız ne kadar büyükse, Arkeo airdrop'unuz da o kadar büyük olur.",
-      "cta": "FOX Takas yap",
-      "secondary": "FOX Satın Al"
+    "furyTokenHolders": {
+      "title": "FURY Token Sahipleri",
+      "body": "Cüzdanda tutulan FURY token'ları. Çantanız ne kadar büyükse, Arkeo airdrop'unuz da o kadar büyük olur.",
+      "cta": "FURY Takas yap",
+      "secondary": "FURY Satın Al"
     },
-    "foxFarmers": {
-      "title": "FOX/ETH LP Çiftçiler",
-      "body": "FOX Farm'da ETH/FOX LP jetonlarınızı staking yaparak %{apy} APR'ye kadar kazanın. AYRICA FOX Farm'ın 5. Turunda yatırdığınız ETH/FOX LP tokenlerinin temelinde yatan FOX, Arkeo airdrop'u için hak kazanacaktır.",
-      "cta": "FOX/ETH LP Stake Et"
+    "furyFarmers": {
+      "title": "FURY/ETH LP Çiftçiler",
+      "body": "FURY Farm'da ETH/FURY LP jetonlarınızı staking yaparak %{apy} APR'ye kadar kazanın. AYRICA FURY Farm'ın 5. Turunda yatırdığınız ETH/FURY LP tokenlerinin temelinde yatan FURY, Arkeo airdrop'u için hak kazanacaktır.",
+      "cta": "FURY/ETH LP Stake Et"
     },
-    "foxyTokenHolders": {
-      "title": "FOXy Token Sahipleri",
-      "body": "FOX Yieldy (FOXy) ile boştaki FOX'unuzdan %{apy}'ye kadar APR kazanın. AYRICA Cüzdanınızda tutulan FOXy, FOX ile aynı muameleyi görecek ve Arkeo airdrop için uygun olacaktır.",
-      "cta": "FOX Token Stake Et"
+    "jinxTokenHolders": {
+      "title": "FURYy Token Sahipleri",
+      "body": "FURY Yieldy (FURYy) ile boştaki FURY'unuzdan %{apy}'ye kadar APR kazanın. AYRICA Cüzdanınızda tutulan FURYy, FURY ile aynı muameleyi görecek ve Arkeo airdrop için uygun olacaktır.",
+      "cta": "FURY Token Stake Et"
     },
-    "foxEthProviders": {
-      "title": "FOX/ETH Uniswap V2 LP'ler",
-      "body": "%{asset1} ve %{asset2}'ye sahip misiniz? Uniswap V2 Havuzuna likidite sağlayarak %{apy} APR kazanın. AYRICA, sahip olduğunuz FOX/ETH LP tokenlarındaki temel FOX, Arkeo airdrop için uygun olacaktır.",
+    "furyEthProviders": {
+      "title": "FURY/ETH Uniswap V2 LP'ler",
+      "body": "%{asset1} ve %{asset2}'ye sahip misiniz? Uniswap V2 Havuzuna likidite sağlayarak %{apy} APR kazanın. AYRICA, sahip olduğunuz FURY/ETH LP tokenlarındaki temel FURY, Arkeo airdrop için uygun olacaktır.",
       "cta": "Likidite Ekleyin"
     },
     "atomOsmoProviders": {
@@ -1973,7 +1973,7 @@
     }
   },
   "nft": {
-    "customizeFoxatar": "FOXatar'ını Özelleştir",
+    "customizeFuryatar": "FURYatar'ını Özelleştir",
     "setAsAvatar": "Avatar olarak ayarla",
     "floorPrice": "Taban Fiyat",
     "lastPrice": "Son fiyat",
@@ -1992,7 +1992,7 @@
     "emptyBody": "Endişelenmeyin, daha harika NFT'leri geri getirmek için bir arama grubu gönderdik. Bu arada, bu boşluğa bakıp varoluşun anlamını düşünmekten çekinmeyin."
   },
   "missions": {
-    "subtitle": "FOX Görevleri",
+    "subtitle": "FURY Görevleri",
     "missionEnded": "Görev Sona Erdi",
     "viewMission": "Görevleri Görüntüle",
     "comingSoon": "Yakında",
@@ -2010,14 +2010,14 @@
       "subtitle": "Optimism'i Keşfedin",
       "cta": "Göreve Başla"
     },
-    "foxatar": {
+    "furyatar": {
       "title": "Ücretsiz ve Özelleştirilebilir bir NFT edinin",
-      "subtitle": "FOXatar'ı Basın",
+      "subtitle": "FURYatar'ı Basın",
       "cta": "Göreve Başla"
     },
-    "foxArmy": {
-      "subtitle": "FOX Ordusuna Katılın",
-      "title": "20.000 FOX Havuzu",
+    "furyArmy": {
+      "subtitle": "FURY Ordusuna Katılın",
+      "title": "20.000 FURY Havuzu",
       "cta": "Göreve Başla"
     },
     "yat": {
@@ -2030,9 +2030,9 @@
       "title": "Görevler İçin Bir Proje Başlatın",
       "cta": "Projeyi Gönder"
     },
-    "foxRewards": {
+    "furyRewards": {
       "subtitle": "Satın alın, satın, ticaret yapın, kazanın ve daha fazlasını yapın",
-      "title": "FOX Kazanın",
+      "title": "FURY Kazanın",
       "cta": "Göreve Başla"
     }
   },

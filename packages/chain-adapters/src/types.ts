@@ -32,6 +32,7 @@ type ChainSpecificAccount<T> = ChainSpecific<
     [KnownChainIds.LitecoinMainnet]: utxo.Account
     [KnownChainIds.CosmosMainnet]: cosmossdk.Account
     [KnownChainIds.OsmosisMainnet]: cosmossdk.Account
+    [KnownChainIds.MerlinsMainnet]: cosmossdk.Account
     [KnownChainIds.ThorchainMainnet]: cosmossdk.Account
   }
 >
@@ -69,6 +70,7 @@ type ChainSpecificFeeData<T> = ChainSpecific<
     [KnownChainIds.DogecoinMainnet]: utxo.FeeData
     [KnownChainIds.LitecoinMainnet]: utxo.FeeData
     [KnownChainIds.CosmosMainnet]: cosmossdk.FeeData
+    [KnownChainIds.MerlinsMainnet]: cosmossdk.FeeData
     [KnownChainIds.OsmosisMainnet]: cosmossdk.FeeData
     [KnownChainIds.ThorchainMainnet]: cosmossdk.FeeData
   }
@@ -133,6 +135,7 @@ export type ChainSignTx = {
   [KnownChainIds.DogecoinMainnet]: BTCSignTx
   [KnownChainIds.LitecoinMainnet]: BTCSignTx
   [KnownChainIds.CosmosMainnet]: CosmosSignTx
+  [KnownChainIds.MerlinsMainnet]: CosmosSignTx
   [KnownChainIds.OsmosisMainnet]: OsmosisSignTx
   [KnownChainIds.ThorchainMainnet]: ThorchainSignTx
 }
@@ -170,6 +173,7 @@ export type ChainSpecificBuildTxData<T> = ChainSpecific<
     [KnownChainIds.DogecoinMainnet]: utxo.BuildTxInput
     [KnownChainIds.LitecoinMainnet]: utxo.BuildTxInput
     [KnownChainIds.CosmosMainnet]: cosmossdk.BuildTxInput
+    [KnownChainIds.MerlinsMainnet]: cosmossdk.BuildTxInput
     [KnownChainIds.OsmosisMainnet]: cosmossdk.BuildTxInput
     [KnownChainIds.ThorchainMainnet]: cosmossdk.BuildTxInput
   }

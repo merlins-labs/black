@@ -1,5 +1,5 @@
-import { btcAssetId, ethAssetId, foxAssetId } from '@shapeshiftoss/caip'
-import { BtcSend, EthReceive, EthSend, FOXSend, yearnVaultDeposit } from 'test/mocks/txs'
+import { btcAssetId, ethAssetId, furyAssetId } from '@shapeshiftoss/caip'
+import { BtcSend, EthReceive, EthSend, FURYSend, yearnVaultDeposit } from 'test/mocks/txs'
 
 import { getRelatedAssetIds } from './utils'
 
@@ -26,10 +26,10 @@ describe('txHistorySlice:utils', () => {
       expect(relatedAssetIds.includes(ethAssetId)).toBeTruthy()
     })
 
-    it('can get related asset ids from fox send', () => {
-      const relatedAssetIds = getRelatedAssetIds(FOXSend)
+    it('can get related asset ids from fury send', () => {
+      const relatedAssetIds = getRelatedAssetIds(FURYSend)
       expect(relatedAssetIds.length).toEqual(2)
-      expect(relatedAssetIds.includes(foxAssetId)).toBeTruthy()
+      expect(relatedAssetIds.includes(furyAssetId)).toBeTruthy()
       expect(relatedAssetIds.includes(ethAssetId)).toBeTruthy()
     })
 

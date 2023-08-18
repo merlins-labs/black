@@ -5,8 +5,8 @@ import {
   bscChainId,
   ethAssetId,
   ethChainId,
-  foxAssetId,
-  foxOnGnosisAssetId,
+  furyAssetId,
+  furyOnGnosisAssetId,
   gnosisAssetId,
   gnosisChainId,
   optimismAssetId,
@@ -42,30 +42,30 @@ export const WETH: Asset = {
   symbol: 'WETH',
 }
 
-export const FOX_MAINNET: Asset = {
-  assetId: foxAssetId,
+export const FURY_MAINNET: Asset = {
+  assetId: furyAssetId,
   chainId: ethChainId,
-  name: 'FOX',
+  name: 'FURY',
   precision: 18,
   color: '#FFFFFF',
-  icon: 'https://assets.coincap.io/assets/icons/fox@2x.png',
+  icon: 'https://assets.coincap.io/assets/icons/fury@2x.png',
   explorer: 'https://etherscan.io',
   explorerTxLink: 'https://etherscan.io/tx/',
   explorerAddressLink: 'https://etherscan.io/address/',
-  symbol: 'FOX',
+  symbol: 'FURY',
 }
 
-export const FOX_GNOSIS: Asset = {
-  assetId: foxOnGnosisAssetId,
+export const FURY_GNOSIS: Asset = {
+  assetId: furyOnGnosisAssetId,
   chainId: gnosisChainId,
-  name: 'FOX',
+  name: 'FURY',
   precision: 18,
   color: '#FFFFFF',
-  icon: 'https://assets.coincap.io/assets/icons/fox@2x.png',
+  icon: 'https://assets.coincap.io/assets/icons/fury@2x.png',
   explorer: 'https://gnosisscan.io/',
   explorerAddressLink: 'https://gnosisscan.io/address/',
   explorerTxLink: 'https://gnosisscan.io/tx/',
-  symbol: 'FOX',
+  symbol: 'FURY',
 }
 
 export const WBTC: Asset = {

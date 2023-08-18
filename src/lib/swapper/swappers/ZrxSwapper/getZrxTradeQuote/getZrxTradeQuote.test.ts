@@ -5,7 +5,7 @@ import { Err, Ok } from '@sniptt/monads'
 import type { AxiosStatic } from 'axios'
 import type { SwapErrorRight } from 'lib/swapper/api'
 
-import { BTC, FOX_MAINNET } from '../../utils/test-data/assets'
+import { BTC, FURY_MAINNET } from '../../utils/test-data/assets'
 import { setupQuote } from '../../utils/test-data/setupSwapQuote'
 import { baseUrlFromChainId } from '../utils/helpers/helpers'
 import { zrxServiceFactory } from '../utils/zrxService'
@@ -147,7 +147,7 @@ describe('getZrxTradeQuote', () => {
       code: 'UNSUPPORTED_PAIR',
       details: {
         buyAsset: BTC,
-        sellAsset: FOX_MAINNET,
+        sellAsset: FURY_MAINNET,
       },
       message: `[Zrx: assertValidTrade] - both assets must be on chainId eip155:1`,
       name: 'SwapError',

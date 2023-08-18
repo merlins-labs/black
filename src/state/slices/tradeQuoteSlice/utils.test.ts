@@ -1,7 +1,7 @@
 import type { AssetId } from '@shapeshiftoss/caip'
 import { baseUnitToHuman, bn, convertPrecision } from 'lib/bignumber/bignumber'
 import type { ProtocolFee } from 'lib/swapper/api'
-import { BTC, ETH, FOX_MAINNET } from 'lib/swapper/swappers/utils/test-data/assets'
+import { BTC, ETH, FURY_MAINNET } from 'lib/swapper/swappers/utils/test-data/assets'
 import { cryptoMarketDataById } from 'lib/swapper/swappers/utils/test-data/cryptoMarketDataById'
 import {
   subtractBasisPointAmount,
@@ -14,8 +14,8 @@ describe('sumProtocolFeesToDenom', () => {
 
     const result = sumProtocolFeesToDenom({
       cryptoMarketDataById,
-      outputExponent: FOX_MAINNET.precision,
-      outputAssetPriceUsd: cryptoMarketDataById[FOX_MAINNET.assetId].price,
+      outputExponent: FURY_MAINNET.precision,
+      outputAssetPriceUsd: cryptoMarketDataById[FURY_MAINNET.assetId].price,
       protocolFees,
     })
 
@@ -38,34 +38,34 @@ describe('sumProtocolFeesToDenom', () => {
 
     const result = sumProtocolFeesToDenom({
       cryptoMarketDataById,
-      outputExponent: FOX_MAINNET.precision,
-      outputAssetPriceUsd: cryptoMarketDataById[FOX_MAINNET.assetId].price,
+      outputExponent: FURY_MAINNET.precision,
+      outputAssetPriceUsd: cryptoMarketDataById[FURY_MAINNET.assetId].price,
       protocolFees,
     })
 
-    const btcToFoxPriceRatio = bn(cryptoMarketDataById[BTC.assetId].price).div(
-      cryptoMarketDataById[FOX_MAINNET.assetId].price,
+    const btcToFuryPriceRatio = bn(cryptoMarketDataById[BTC.assetId].price).div(
+      cryptoMarketDataById[FURY_MAINNET.assetId].price,
     )
-    const ethToFoxPriceRatio = bn(cryptoMarketDataById[ETH.assetId].price).div(
-      cryptoMarketDataById[FOX_MAINNET.assetId].price,
+    const ethToFuryPriceRatio = bn(cryptoMarketDataById[ETH.assetId].price).div(
+      cryptoMarketDataById[FURY_MAINNET.assetId].price,
     )
 
-    expect(btcToFoxPriceRatio.gt(0)).toBe(true)
-    expect(ethToFoxPriceRatio.gt(0)).toBe(true)
+    expect(btcToFuryPriceRatio.gt(0)).toBe(true)
+    expect(ethToFuryPriceRatio.gt(0)).toBe(true)
 
-    const btcAmountInFox = convertPrecision({
+    const btcAmountInFury = convertPrecision({
       value: '3000000',
       inputExponent: BTC.precision,
-      outputExponent: FOX_MAINNET.precision,
-    }).times(btcToFoxPriceRatio)
+      outputExponent: FURY_MAINNET.precision,
+    }).times(btcToFuryPriceRatio)
 
-    const ethAmountInFox = convertPrecision({
+    const ethAmountInFury = convertPrecision({
       value: '500000000000000000',
       inputExponent: ETH.precision,
-      outputExponent: FOX_MAINNET.precision,
-    }).times(ethToFoxPriceRatio)
+      outputExponent: FURY_MAINNET.precision,
+    }).times(ethToFuryPriceRatio)
 
-    const expectation = btcAmountInFox.plus(ethAmountInFox).toString()
+    const expectation = btcAmountInFury.plus(ethAmountInFury).toString()
 
     expect(result).toEqual(expectation)
   })

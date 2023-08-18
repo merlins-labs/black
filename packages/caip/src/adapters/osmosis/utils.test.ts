@@ -88,7 +88,7 @@ describe('writeFiles', () => {
         assetIdDef: 'efferium',
       },
       bar: {
-        assetIdGhi: 'fox',
+        assetIdGhi: 'fury',
         assetIdJkl: 'shib',
       },
     }

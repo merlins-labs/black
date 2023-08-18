@@ -44,12 +44,14 @@ import type {
 
 const CHAIN_ID_TO_BECH32_ADDR_PREFIX = {
   [KnownChainIds.CosmosMainnet]: 'cosmos',
+  [KnownChainIds.MerlinsMainnet]: 'fury',
   [KnownChainIds.OsmosisMainnet]: 'osmo',
   [KnownChainIds.ThorchainMainnet]: 'thor',
 }
 
 const CHAIN_ID_TO_BECH32_VAL_PREFIX = {
   [KnownChainIds.CosmosMainnet]: 'cosmosvaloper',
+  [KnownChainIds.MerlinsMainnet]: 'furyvaloper',
   [KnownChainIds.OsmosisMainnet]: 'osmovaloper',
   [KnownChainIds.ThorchainMainnet]: 'thorv',
 }
@@ -81,6 +83,7 @@ const parsedTxToTransaction = (parsedTx: unchained.cosmossdk.ParsedTx): Transact
 
 export const cosmosSdkChainIds = [
   KnownChainIds.CosmosMainnet,
+  KnownChainIds.MerlinsMainnet,
   KnownChainIds.OsmosisMainnet,
   KnownChainIds.ThorchainMainnet,
 ] as const
@@ -89,16 +92,21 @@ export type CosmosSdkChainId = typeof cosmosSdkChainIds[number]
 
 export type CosmosSdkChainAdapter =
   | cosmos.ChainAdapter
+  | cosmos.ChainAdapter
   | osmosis.ChainAdapter
   | thorchain.ChainAdapter
 
-type Denom = 'uatom' | 'uosmo' | 'rune'
+type Denom = 'uatom' | 'ufury' | 'uosmo' | 'rune'
 
 export interface ChainAdapterArgs {
   chainId?: CosmosSdkChainId
   coinName: string
   providers: {
-    http: unchained.cosmos.V1Api | unchained.osmosis.V1Api | unchained.thorchain.V1Api
+    http:
+      | unchained.cosmos.V1Api
+      | unchained.merlins.V1Api
+      | unchained.osmosis.V1Api
+      | unchained.thorchain.V1Api
     ws: unchained.ws.Client<unchained.cosmossdk.Tx>
   }
 }
@@ -118,7 +126,11 @@ export abstract class CosmosSdkBaseAdapter<T extends CosmosSdkChainId> implement
   protected readonly defaultBIP44Params: BIP44Params
   protected readonly supportedChainIds: ChainId[]
   protected readonly providers: {
-    http: unchained.cosmos.V1Api | unchained.osmosis.V1Api | unchained.thorchain.V1Api
+    http:
+      | unchained.cosmos.V1Api
+      | unchained.osmosis.V1Api
+      | unchained.merlins.V1Api
+      | unchained.thorchain.V1Api
     ws: unchained.ws.Client<unchained.cosmossdk.Tx>
   }
 

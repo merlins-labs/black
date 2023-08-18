@@ -11,6 +11,8 @@ import {
   cosmosChainId,
   ethAssetId,
   ethChainId,
+  merlinsAssetId,
+  merlinsChainId,
   osmosisAssetId,
   osmosisChainId,
 } from './constants'
@@ -104,6 +106,7 @@ describe('type guard', () => {
       expect(isChainId(ethChainId)).toEqual(true)
       expect(isChainId(btcChainId)).toEqual(true)
       expect(isChainId(cosmosChainId)).toEqual(true)
+      expect(isChainId(merlinsChainId)).toEqual(true)
       expect(isChainId(osmosisChainId)).toEqual(true)
       expect(isChainId('invalid')).toEqual(false)
       expect(isChainId('')).toEqual(false)
@@ -133,6 +136,7 @@ describe('type guard', () => {
       expect(isAssetId(btcAssetId)).toEqual(true)
       expect(isAssetId(ethAssetId)).toEqual(true)
       expect(isAssetId(cosmosAssetId)).toEqual(true)
+      expect(isAssetId(merlinsAssetId)).toEqual(true)
       expect(isAssetId(osmosisAssetId)).toEqual(true)
       expect(isAssetId('invalid')).toEqual(false)
       expect(isAssetId('')).toEqual(false)
@@ -146,6 +150,7 @@ describe('type guard assertion', () => {
       expect(() => assertIsChainId(ethChainId)).not.toThrow()
       expect(() => assertIsChainId(btcChainId)).not.toThrow()
       expect(() => assertIsChainId(cosmosChainId)).not.toThrow()
+      expect(() => assertIsChainId(merlinsChainId)).not.toThrow()
       expect(() => assertIsChainId(osmosisChainId)).not.toThrow()
       expect(() => assertIsChainId('invalid')).toThrow()
       expect(() => assertIsChainId('')).toThrow()

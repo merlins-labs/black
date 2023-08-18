@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2021 ShapeShift
+Copyright (c) 2021 0x0eafe556aebc3fdd512006b78ed36990451fa3b8
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

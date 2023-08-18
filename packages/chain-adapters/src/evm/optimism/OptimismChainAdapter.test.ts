@@ -39,7 +39,7 @@ const getWallet = async (): Promise<ETHWallet> => {
 
 const gasPrice = '42'
 const gasLimit = '42000'
-const contractAddress = '0xc770eefad204b5180df6a14ee197d99d808ee52d'
+const contractAddress = '0x3c3dc25ca709de108f6fc9b04bef5976876b05b1'
 const value = 400
 
 const makeChainSpecific = (chainSpecificAdditionalProps?: { contractAddress: string }) =>
@@ -73,10 +73,10 @@ const makeGetAccountMockResponse = (balance: {
   nonce: 2,
   tokens: [
     {
-      assetId: 'eip155:10/erc20:0xc770eefad204b5180df6a14ee197d99d808ee52d',
+      assetId: 'eip155:10/erc20:0x3c3dc25ca709de108f6fc9b04bef5976876b05b1',
       balance: balance.tokenBalance,
       type: 'ERC20',
-      contract: '0xc770eefad204b5180df6a14ee197d99d808ee52d',
+      contract: '0x3c3dc25ca709de108f6fc9b04bef5976876b05b1',
     },
   ],
 })
@@ -570,7 +570,7 @@ describe('OptimismChainAdapter', () => {
           gasLimit: numberToHex(gasLimit),
           gasPrice: numberToHex(gasPrice),
           nonce: '0x2',
-          to: '0xc770eefad204b5180df6a14ee197d99d808ee52d',
+          to: '0x3c3dc25ca709de108f6fc9b04bef5976876b05b1',
           value: '0x0',
         },
       })
@@ -607,7 +607,7 @@ describe('OptimismChainAdapter', () => {
           gasLimit: numberToHex(gasLimit),
           gasPrice: numberToHex(gasPrice),
           nonce: '0x2',
-          to: '0xc770eefad204b5180df6a14ee197d99d808ee52d',
+          to: '0x3c3dc25ca709de108f6fc9b04bef5976876b05b1',
           value: '0x0',
         },
       })

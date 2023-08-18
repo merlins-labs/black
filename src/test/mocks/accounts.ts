@@ -4,7 +4,7 @@ import {
   btcChainId,
   ethAssetId,
   ethChainId,
-  foxAssetId,
+  furyAssetId,
 } from '@shapeshiftoss/caip'
 import { type Account } from '@shapeshiftoss/chain-adapters'
 import { KnownChainIds } from '@shapeshiftoss/types'
@@ -20,7 +20,7 @@ export const unknown3AssetId: AssetId = 'eip155:1/erc20:0xecd18dbba2987608c094ed
 
 export const assetIds = [
   ethAssetId,
-  foxAssetId,
+  furyAssetId,
   usdcAssetId,
   yvusdcAssetId,
   zeroAssetId,
@@ -49,7 +49,7 @@ export const btcAddresses = Object.freeze([
 
 export const mockEthToken = (obj?: { balance?: string; assetId?: string }) => ({
   balance: '100',
-  assetId: foxAssetId,
+  assetId: furyAssetId,
   ...obj,
 })
 
@@ -111,7 +111,7 @@ export const mockEthAndBtcAccounts = ({
       chainSpecific: {
         nonce: 1,
         tokens: [
-          mockEthToken({ balance: '3000000000000000000', assetId: foxAssetId }),
+          mockEthToken({ balance: '3000000000000000000', assetId: furyAssetId }),
           mockEthToken({ balance: '10000000', assetId: usdcAssetId }),
         ],
       },
@@ -125,7 +125,7 @@ export const mockEthAndBtcAccounts = ({
       pubkey: ethPubKeys[1],
       chainSpecific: {
         nonce: 1,
-        tokens: [mockEthToken({ balance: '2000000000000000000', assetId: foxAssetId })],
+        tokens: [mockEthToken({ balance: '2000000000000000000', assetId: furyAssetId })],
       },
     }),
     ethAccount2Obj,

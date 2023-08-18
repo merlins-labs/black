@@ -23,7 +23,7 @@ export enum CoingeckoAssetPlatform {
 
 type CoinGeckoId = string
 
-// markets.shapeshift.com is a coingecko proxy maintained by the fox foundation
+// markets.shapeshift.com is a coingecko proxy maintained by the fury foundation
 export const coingeckoBaseUrl = 'https://markets.shapeshift.com/api/v3'
 // export const coingeckoBaseUrl = 'http://localhost:1137/api/v3'
 export const coingeckoProBaseUrl = coingeckoBaseUrl

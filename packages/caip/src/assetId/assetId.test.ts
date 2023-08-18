@@ -16,7 +16,7 @@ describe('assetId', () => {
       it.each([
         ['eip155:1/slip44:60'],
         ['eip155:3/slip44:60'],
-        ['eip155:1/erc20:0xc770eefad204b5180df6a14ee197d99d808ee52d'],
+        ['eip155:1/erc20:0x3c3dc25ca709de108f6fc9b04bef5976876b05b1'],
         ['bip122:000000000019d6689c085ae165831e93/slip44:0'],
         ['bip122:000000000933ea01ad0ee984209779ba/slip44:0'],
         ['cosmos:cosmoshub-4/slip44:118'],
@@ -283,17 +283,17 @@ describe('assetId', () => {
       ).toThrow()
     })
 
-    it('can make FOX AssetId on mainnet', () => {
+    it('can make FURY AssetId on mainnet', () => {
       const chainNamespace = CHAIN_NAMESPACE.Evm
       const chainReference = CHAIN_REFERENCE.EthereumMainnet
       const assetIdArgSuperset = {
         chainNamespace,
         chainReference,
         assetNamespace: 'erc20' as AssetNamespace,
-        assetReference: '0xc770eefad204b5180df6a14ee197d99d808ee52d',
+        assetReference: '0x3c3dc25ca709de108f6fc9b04bef5976876b05b1',
         chainId: `${chainNamespace}:${chainReference}`,
       }
-      const expected = 'eip155:1/erc20:0xc770eefad204b5180df6a14ee197d99d808ee52d'
+      const expected = 'eip155:1/erc20:0x3c3dc25ca709de108f6fc9b04bef5976876b05b1'
       expect(toAssetId(omit(assetIdArgSuperset, 'chainId'))).toEqual(expected)
       expect(toAssetId(omit(assetIdArgSuperset, ['chainNamespace', 'chainReference']))).toEqual(
         expected,
@@ -310,7 +310,7 @@ describe('assetId', () => {
         assetReference: '0xc770EEfAd204B5180dF6a14Ee197D99d808ee52d',
         chainId: `${chainNamespace}:${chainReference}`,
       }
-      const expected = 'eip155:1/erc20:0xc770eefad204b5180df6a14ee197d99d808ee52d'
+      const expected = 'eip155:1/erc20:0x3c3dc25ca709de108f6fc9b04bef5976876b05b1'
       expect(toAssetId(omit(assetIdArgSuperset, 'chainId'))).toEqual(expected)
       expect(toAssetId(omit(assetIdArgSuperset, ['chainNamespace', 'chainReference']))).toEqual(
         expected,
@@ -327,24 +327,24 @@ describe('assetId', () => {
         assetReference: '0xc770EEfAd204B5180dF6a14Ee197D99d808ee52d/12345',
         chainId: `${chainNamespace}:${chainReference}`,
       }
-      const expected = 'eip155:1/erc721:0xc770eefad204b5180df6a14ee197d99d808ee52d/12345'
+      const expected = 'eip155:1/erc721:0x3c3dc25ca709de108f6fc9b04bef5976876b05b1/12345'
       expect(toAssetId(omit(assetIdArgSuperset, 'chainId'))).toEqual(expected)
       expect(toAssetId(omit(assetIdArgSuperset, ['chainNamespace', 'chainReference']))).toEqual(
         expected,
       )
     })
 
-    it('can make FOX AssetId on ropsten', () => {
+    it('can make FURY AssetId on ropsten', () => {
       const chainNamespace = CHAIN_NAMESPACE.Evm
       const chainReference = CHAIN_REFERENCE.EthereumRopsten
       const assetIdArgSuperset = {
         chainNamespace,
         chainReference,
         assetNamespace: 'erc20' as AssetNamespace,
-        assetReference: '0xc770eefad204b5180df6a14ee197d99d808ee52d',
+        assetReference: '0x3c3dc25ca709de108f6fc9b04bef5976876b05b1',
         chainId: `${chainNamespace}:${chainReference}`,
       }
-      const expected = 'eip155:3/erc20:0xc770eefad204b5180df6a14ee197d99d808ee52d'
+      const expected = 'eip155:3/erc20:0x3c3dc25ca709de108f6fc9b04bef5976876b05b1'
       expect(toAssetId(omit(assetIdArgSuperset, 'chainId'))).toEqual(expected)
       expect(toAssetId(omit(assetIdArgSuperset, ['chainNamespace', 'chainReference']))).toEqual(
         expected,
@@ -465,7 +465,7 @@ describe('assetId', () => {
           CHAIN_NAMESPACE.Evm,
           CHAIN_REFERENCE.EthereumMainnet,
           erc20,
-          '0xc770eefad204b5180df6a14ee197d99d808ee52d',
+          '0x3c3dc25ca709de108f6fc9b04bef5976876b05b1',
         ],
         [
           CHAIN_NAMESPACE.CosmosSdk,
@@ -560,15 +560,15 @@ describe('assetId', () => {
       expect(assetReference).toEqual(ASSET_REFERENCE.Bitcoin)
     })
 
-    it('can return chainId, chainReference, chainNamespace, assetNamespace, assetReference from FOX AssetId on mainnet', () => {
-      const AssetId = 'eip155:1/erc20:0xc770eefad204b5180df6a14ee197d99d808ee52d'
+    it('can return chainId, chainReference, chainNamespace, assetNamespace, assetReference from FURY AssetId on mainnet', () => {
+      const AssetId = 'eip155:1/erc20:0x3c3dc25ca709de108f6fc9b04bef5976876b05b1'
       const { chainId, chainReference, chainNamespace, assetNamespace, assetReference } =
         fromAssetId(AssetId)
       expect(chainNamespace).toEqual(CHAIN_NAMESPACE.Evm)
       expect(chainReference).toEqual(CHAIN_REFERENCE.EthereumMainnet)
       expect(chainId).toEqual(toChainId({ chainNamespace, chainReference }))
       expect(assetNamespace).toEqual('erc20')
-      expect(assetReference).toEqual('0xc770eefad204b5180df6a14ee197d99d808ee52d')
+      expect(assetReference).toEqual('0x3c3dc25ca709de108f6fc9b04bef5976876b05b1')
     })
 
     it('should lower case assetReference for assetNamespace ERC20', () => {
@@ -579,7 +579,7 @@ describe('assetId', () => {
       expect(chainReference).toEqual(CHAIN_REFERENCE.EthereumRopsten)
       expect(chainId).toEqual(toChainId({ chainNamespace, chainReference }))
       expect(assetNamespace).toEqual('erc20')
-      expect(assetReference).toEqual('0xc770eefad204b5180df6a14ee197d99d808ee52d')
+      expect(assetReference).toEqual('0x3c3dc25ca709de108f6fc9b04bef5976876b05b1')
     })
 
     it('should lower case assetReference for assetNamespace ERC721', () => {
@@ -591,19 +591,19 @@ describe('assetId', () => {
       expect(chainId).toEqual(toChainId({ chainNamespace, chainReference }))
       expect(assetNamespace).toEqual('erc721')
       const [address, id] = assetReference.split('/')
-      expect(address).toEqual('0xc770eefad204b5180df6a14ee197d99d808ee52d')
+      expect(address).toEqual('0x3c3dc25ca709de108f6fc9b04bef5976876b05b1')
       expect(id).toEqual('12345')
     })
 
-    it('can return chainId, chainReference, chainNamespace, assetNamespace, assetReference from FOX AssetId on ropsten', () => {
-      const AssetId = 'eip155:3/erc20:0xc770eefad204b5180df6a14ee197d99d808ee52d'
+    it('can return chainId, chainReference, chainNamespace, assetNamespace, assetReference from FURY AssetId on ropsten', () => {
+      const AssetId = 'eip155:3/erc20:0x3c3dc25ca709de108f6fc9b04bef5976876b05b1'
       const { chainId, chainReference, chainNamespace, assetNamespace, assetReference } =
         fromAssetId(AssetId)
       expect(chainNamespace).toEqual(CHAIN_NAMESPACE.Evm)
       expect(chainReference).toEqual(CHAIN_REFERENCE.EthereumRopsten)
       expect(chainId).toEqual(toChainId({ chainNamespace, chainReference }))
       expect(assetNamespace).toEqual('erc20')
-      expect(assetReference).toEqual('0xc770eefad204b5180df6a14ee197d99d808ee52d')
+      expect(assetReference).toEqual('0x3c3dc25ca709de108f6fc9b04bef5976876b05b1')
     })
 
     it('can parse a cosmoshub native token', () => {

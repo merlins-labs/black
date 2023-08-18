@@ -1,6 +1,6 @@
 import { createSelector } from '@reduxjs/toolkit'
 import type { AccountId, AssetId } from '@shapeshiftoss/caip'
-import { foxAssetId, fromAccountId, fromAssetId } from '@shapeshiftoss/caip'
+import { fromAccountId, fromAssetId, furyAssetId } from '@shapeshiftoss/caip'
 import type { AssetWithBalance } from 'features/defi/components/Overview/Overview'
 import partition from 'lodash/partition'
 import pickBy from 'lodash/pickBy'
@@ -31,7 +31,7 @@ import {
   selectMarketDataByFilter,
   selectSelectedCurrencyMarketDataSortedByMarketCap,
 } from '../../marketDataSlice/selectors'
-import { foxEthLpAssetId } from '../constants'
+import { furyEthLpAssetId } from '../constants'
 import type { CosmosSdkStakingSpecificUserStakingOpportunity } from '../resolvers/cosmosSdk/types'
 import { makeOpportunityTotalFiatBalance } from '../resolvers/cosmosSdk/utils'
 import type {
@@ -49,7 +49,7 @@ import {
   getOpportunityAccessor,
   isActiveStakingEarnOpportunity,
   isActiveStakingOpportunity,
-  isFoxEthStakingAssetId,
+  isFuryEthStakingAssetId,
   makeOpportunityIcons,
   serializeUserStakingId,
   supportsUndelegations,
@@ -346,10 +346,10 @@ export const selectAggregatedEarnUserStakingOpportunityByStakingId = createDeepE
 
     const aggregatedEarnUserStakingOpportunity: StakingEarnOpportunityType = Object.assign(
       {},
-      isFoxEthStakingAssetId(opportunity.assetId)
+      isFuryEthStakingAssetId(opportunity.assetId)
         ? {
             contractAddress: fromAssetId(opportunity.assetId).assetReference,
-            rewardAddress: fromAssetId(foxAssetId).assetReference,
+            rewardAddress: fromAssetId(furyAssetId).assetReference,
           }
         : {},
       opportunity,
@@ -401,10 +401,10 @@ export const selectAggregatedEarnUserStakingOpportunities = createDeepEqualOutpu
             return { contractAddress: fromAccountId(opportunity.id).account }
           }
 
-          if (isFoxEthStakingAssetId(opportunity.assetId))
+          if (isFuryEthStakingAssetId(opportunity.assetId))
             return {
               contractAddress: fromAssetId(opportunity.assetId).assetReference,
-              rewardAddress: fromAssetId(foxAssetId).assetReference,
+              rewardAddress: fromAssetId(furyAssetId).assetReference,
             }
 
           if (isToken(fromAssetId(opportunity.underlyingAssetId).assetReference)) {
@@ -460,7 +460,7 @@ export const selectActiveAggregatedEarnUserStakingOpportunitiesWithTotalFiatAmou
   )
 // Returns a single aggregated amount, for all opportunities, accounts, and assets
 // Including delegations, undelegations, and rewards
-// Also slaps in ETH/FOX balances which value lives in the portfolio vs. being an "upstream earn opportunity"
+// Also slaps in ETH/FURY balances which value lives in the portfolio vs. being an "upstream earn opportunity"
 export const selectEarnBalancesUserCurrencyAmountFull = createDeepEqualOutputSelector(
   selectAggregatedUserStakingOpportunities,
   selectSelectedCurrencyMarketDataSortedByMarketCap,
@@ -471,7 +471,7 @@ export const selectEarnBalancesUserCurrencyAmountFull = createDeepEqualOutputSel
       .map(opportunity => makeOpportunityTotalFiatBalance({ opportunity, marketData, assets }))
       .reduce((acc, opportunityFiatAmount) => acc.plus(opportunityFiatAmount), bn(0))
       // TODO(gomes): add all UNI/V2 asset balances here
-      .plus(bnOrZero(portfolioFiatBalances[foxEthLpAssetId])),
+      .plus(bnOrZero(portfolioFiatBalances[furyEthLpAssetId])),
 )
 
 export const selectAggregatedEarnUserStakingOpportunitiesIncludeEmpty =
@@ -493,9 +493,9 @@ export const selectAggregatedEarnUserStakingOpportunitiesIncludeEmpty =
               if (opportunity.provider === DefiProvider.CosmosSdk)
                 return { contractAddress: fromAccountId(opportunity.id).account }
 
-              if (isFoxEthStakingAssetId(opportunity.assetId))
+              if (isFuryEthStakingAssetId(opportunity.assetId))
                 return {
-                  rewardAddress: fromAssetId(foxAssetId).assetReference,
+                  rewardAddress: fromAssetId(furyAssetId).assetReference,
                   contractAddress: fromAssetId(opportunity.assetId).assetReference,
                 }
 

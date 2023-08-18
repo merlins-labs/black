@@ -1,9 +1,9 @@
-import { BTC, ETH, FOX_MAINNET } from '../../../utils/test-data/assets'
+import { BTC, ETH, FURY_MAINNET } from '../../../utils/test-data/assets'
 import type { ThornodeQuoteResponseSuccess } from '../../types'
 import { getTradeRate } from './getTradeRate'
 
 describe('getTradeRate', () => {
-  it('should calculate a correct rate for trading ETH to FOX', async () => {
+  it('should calculate a correct rate for trading ETH to FURY', async () => {
     const thornodeQuote: ThornodeQuoteResponseSuccess = {
       expected_amount_out: '1575048772',
       expiry: '1681129306',
@@ -25,7 +25,7 @@ describe('getTradeRate', () => {
 
     const maybeTradeRate = await getTradeRate({
       sellAsset: ETH,
-      buyAssetId: FOX_MAINNET.assetId,
+      buyAssetId: FURY_MAINNET.assetId,
       sellAmountCryptoBaseUnit: '1000000000000000000000000',
       thornodeQuote,
     })
@@ -34,7 +34,7 @@ describe('getTradeRate', () => {
     expect(maybeTradeRate.unwrap()).toEqual(expectedRate)
   })
 
-  it('should calculate a correct rate for trading FOX to ETH', async () => {
+  it('should calculate a correct rate for trading FURY to ETH', async () => {
     const thornodeQuote: ThornodeQuoteResponseSuccess = {
       expected_amount_out: '1168571',
       expiry: '1681132574',
@@ -55,7 +55,7 @@ describe('getTradeRate', () => {
     }
 
     const maybeTradeRate = await getTradeRate({
-      sellAsset: FOX_MAINNET,
+      sellAsset: FURY_MAINNET,
       buyAssetId: ETH.assetId,
       sellAmountCryptoBaseUnit: '100000000000',
       thornodeQuote,
@@ -65,7 +65,7 @@ describe('getTradeRate', () => {
     expect(maybeTradeRate.unwrap()).toEqual(expectedRate)
   })
 
-  it('should calculate a correct rate for trading FOX to BTC', async () => {
+  it('should calculate a correct rate for trading FURY to BTC', async () => {
     const thornodeQuote: ThornodeQuoteResponseSuccess = {
       expected_amount_out: '75710',
       expiry: '1681132683',
@@ -86,7 +86,7 @@ describe('getTradeRate', () => {
     }
 
     const maybeTradeRate = await getTradeRate({
-      sellAsset: FOX_MAINNET,
+      sellAsset: FURY_MAINNET,
       buyAssetId: BTC.assetId,
       sellAmountCryptoBaseUnit: '100000000000',
       thornodeQuote,
@@ -96,13 +96,13 @@ describe('getTradeRate', () => {
     expect(maybeTradeRate.unwrap()).toEqual(expectedRate)
   })
 
-  it('should calculate a correct rate for trading BTC to FOX', async () => {
+  it('should calculate a correct rate for trading BTC to FURY', async () => {
     const thornodeQuote: ThornodeQuoteResponseSuccess = {
       expected_amount_out: '261454522054192',
       expiry: '1681132269',
       fees: {
         affiliate: '0',
-        asset: 'ETH.FOX-0XC770EEFAD204B5180DF6A14EE197D99D808EE52D',
+        asset: 'ETH.FURY-0XC770EEFAD204B5180DF6A14EE197D99D808EE52D',
         outbound: '16554235812',
       },
       inbound_address: 'bc1qucjrczghvwl5d66klz6npv7tshkpwpzlw0zzj8',
@@ -118,7 +118,7 @@ describe('getTradeRate', () => {
 
     const maybeRate = await getTradeRate({
       sellAsset: BTC,
-      buyAssetId: FOX_MAINNET.assetId,
+      buyAssetId: FURY_MAINNET.assetId,
       sellAmountCryptoBaseUnit: '1000000000',
       thornodeQuote,
     })
@@ -149,7 +149,7 @@ describe('getTradeRate', () => {
 
     const maybeTradeRate = await getTradeRate({
       sellAsset: ETH,
-      buyAssetId: FOX_MAINNET.assetId,
+      buyAssetId: FURY_MAINNET.assetId,
       sellAmountCryptoBaseUnit: '1000000000000000000000000',
       thornodeQuote,
     })

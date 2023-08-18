@@ -1,9 +1,9 @@
 import type { Asset } from 'lib/asset-service'
-import { FOX_MAINNET, WETH } from 'lib/swapper/swappers/utils/test-data/assets'
+import { FURY_MAINNET, WETH } from 'lib/swapper/swappers/utils/test-data/assets'
 import type { ZrxQuoteResponse } from 'lib/swapper/swappers/ZrxSwapper/types'
 
 export const setupZrxTradeQuoteResponse = () => {
-  const sellAsset: Asset = { ...FOX_MAINNET }
+  const sellAsset: Asset = { ...FURY_MAINNET }
   const buyAsset: Asset = { ...WETH }
   const quoteResponse: ZrxQuoteResponse = {
     sellAmount: '1000000000000000000',
@@ -22,7 +22,7 @@ export const setupZrxTradeQuoteResponse = () => {
 }
 
 export const setupExecuteTrade = () => {
-  const sellAsset: Asset = { ...FOX_MAINNET }
+  const sellAsset: Asset = { ...FURY_MAINNET }
   const buyAsset: Asset = { ...WETH }
   const executeTradeInput = {
     sellAmountBeforeFeesCryptoBaseUnit: '1000000000000000000',

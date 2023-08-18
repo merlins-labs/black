@@ -1,7 +1,7 @@
 import { CosmosManager } from 'features/defi/providers/cosmos/components/CosmosManager/CosmosManager'
-import { FoxFarmingManager } from 'features/defi/providers/fox-farming/components/FoxFarmingManager/FoxFarmingManager'
-import { FoxyManager } from 'features/defi/providers/foxy/components/FoxyManager/FoxyManager'
+import { FuryFarmingManager } from 'features/defi/providers/fury-farming/components/FuryFarmingManager/FuryFarmingManager'
 import { IdleManager } from 'features/defi/providers/idle/components/IdleManager/IdleManager'
+import { JinxManager } from 'features/defi/providers/jinx/components/JinxManager/JinxManager'
 import { OsmosisManager } from 'features/defi/providers/osmosis/components/OsmosisManager/OsmosisManager'
 import { ThorchainSaversManager } from 'features/defi/providers/thorchain-savers/components/ThorchainSaversManager/ThorchainSaversManager'
 import { UniV2LpManager } from 'features/defi/providers/univ2/components/UniV2Manager/UniV2LpManager'
@@ -11,8 +11,8 @@ export const DefiProviderToDefiModuleResolverByDeFiType = {
   [`${DefiProvider.UniV2}`]: {
     [`${DefiType.LiquidityPool}`]: UniV2LpManager,
   },
-  [`${DefiProvider.EthFoxStaking}`]: {
-    [`${DefiType.Staking}`]: FoxFarmingManager,
+  [`${DefiProvider.EthFuryStaking}`]: {
+    [`${DefiType.Staking}`]: FuryFarmingManager,
   },
   [DefiProvider.Idle]: {
     [`${DefiType.Staking}`]: IdleManager,
@@ -20,7 +20,7 @@ export const DefiProviderToDefiModuleResolverByDeFiType = {
   [DefiProvider.ThorchainSavers]: {
     [`${DefiType.Staking}`]: ThorchainSaversManager,
   },
-  [DefiProvider.ShapeShift]: FoxyManager,
+  [DefiProvider.ShapeShift]: JinxManager,
   [DefiProvider.CosmosSdk]: CosmosManager,
   [DefiProvider.OsmosisLp]: OsmosisManager,
 }

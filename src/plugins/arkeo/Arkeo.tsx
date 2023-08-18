@@ -11,10 +11,13 @@ import { WalletActions } from 'context/WalletProvider/actions'
 import { KeyManager } from 'context/WalletProvider/KeyManager'
 import { useWallet } from 'hooks/useWallet/useWallet'
 import { isMobile as isMobileApp } from 'lib/globals'
-import { foxEthLpAssetId, foxEthStakingAssetIdV7 } from 'state/slices/opportunitiesSlice/constants'
+import {
+  furyEthLpAssetId,
+  furyEthStakingAssetIdV7,
+} from 'state/slices/opportunitiesSlice/constants'
 import type { DefiType, OpportunityId } from 'state/slices/opportunitiesSlice/types'
 
-import { FoxTokenHolders } from './FoxTokenHolders'
+import { FuryTokenHolders } from './FuryTokenHolders'
 import { LpCards } from './LpCards'
 import { StakingCards } from './StakingCards'
 
@@ -23,16 +26,16 @@ type OpportunityReturn = {
 }
 
 const cosmosOsmosLpAssetId = 'cosmos:osmosis-1/ibc:gamm/pool/1'
-const FOXY_STAKING_CONTRACT = 'eip155:1/erc20:0xee77aa3fd23bbebaf94386dd44b548e9a785ea4b'
+const JINX_STAKING_CONTRACT = 'eip155:1/erc20:0xee77aa3fd23bbebaf94386dd44b548e9a785ea4b'
 
 const opportunities: OpportunityReturn = {
   staking: [
-    FOXY_STAKING_CONTRACT,
-    foxEthStakingAssetIdV7,
+    JINX_STAKING_CONTRACT,
+    furyEthStakingAssetIdV7,
     osmosisAssetId,
     cosmosAssetId,
   ] as OpportunityId[],
-  lp: [foxEthLpAssetId, cosmosOsmosLpAssetId],
+  lp: [furyEthLpAssetId, cosmosOsmosLpAssetId],
 }
 
 export const ArkeoPage = () => {
@@ -61,7 +64,7 @@ export const ArkeoPage = () => {
                 <Link
                   color={linkColor}
                   isExternal
-                  href='https://shapeshift.com/library/foxchain-shapeshift-partners-with-coinbase-cloud'
+                  href='https://shapeshift.com/library/furychain-shapeshift-partners-with-coinbase-cloud'
                 >
                   {translate('arkeo.whatIsArkeo.bodyParts.2')}
                 </Link>
@@ -110,7 +113,7 @@ export const ArkeoPage = () => {
         </Flex>
       </Flex>
       <Grid gridTemplateColumns={{ base: '1fr', lg: '1fr 1fr', xl: '1fr 1fr 1fr' }} gap={4} mt={8}>
-        <FoxTokenHolders />
+        <FuryTokenHolders />
         <StakingCards ids={opportunities.staking} />
         <LpCards ids={opportunities.lp} />
       </Grid>

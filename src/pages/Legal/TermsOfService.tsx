@@ -236,21 +236,21 @@ export const TermsOfService = () => {
             in that individual's particular jurisdiction.
           </RawText>
           <RawText as='p'>
-            <RawText as='strong'>FOX Tokens:</RawText> ShapeShift AG, with whom we are not
+            <RawText as='strong'>FURY Tokens:</RawText> ShapeShift AG, with whom we are not
             affiliated, created a standard ERC-20 token on the Ethereum blockchain that can be
-            accessed through most wallets that support Ethereum called the FOX token (each a &quot;
-            <RawText as='strong'>FOX Token</RawText>&quot;). In spring 2021, ShapeShift AG
-            airdropped the majority of its FOX Tokens to prior users, members of various DAOs,
-            shareholders, employees, and to fund us as a DAO. FOX Tokens are used as governance
-            tokens for the Platform. Neither we nor ShapeShift AG have ever sold FOX Tokens. To
-            learn more about how FOX Token holders can participate in governance of the Platform,
+            accessed through most wallets that support Ethereum called the FURY token (each a &quot;
+            <RawText as='strong'>FURY Token</RawText>&quot;). In spring 2021, ShapeShift AG
+            airdropped the majority of its FURY Tokens to prior users, members of various DAOs,
+            shareholders, employees, and to fund us as a DAO. FURY Tokens are used as governance
+            tokens for the Platform. Neither we nor ShapeShift AG have ever sold FURY Tokens. To
+            learn more about how FURY Token holders can participate in governance of the Platform,
             please join or discord server{' '}
             <Link href='https://discord.com/invite/shapeshift'>
               <RawText as='strong'>here</RawText>
             </Link>{' '}
-            and see the channel titled &quot;governance&quot;. The smart contract for the FOX Tokens
-            can be found{' '}
-            <Link href='https://etherscan.io/token/0xc770eefad204b5180df6a14ee197d99d808ee52d'>
+            and see the channel titled &quot;governance&quot;. The smart contract for the FURY
+            Tokens can be found{' '}
+            <Link href='https://etherscan.io/token/0x3c3dc25ca709de108f6fc9b04bef5976876b05b1'>
               <RawText as='strong'>here</RawText>
             </Link>
             .

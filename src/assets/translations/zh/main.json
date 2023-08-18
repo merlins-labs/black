@@ -153,12 +153,12 @@
           "learnMore": "了解更多"
         }
       },
-      "foxyOverview": {
-        "header": "存入 FOX 来获取 FOXy 收益",
-        "body": "FOXy 是与 FOX 价格挂钩的锚定代币。 FOXy 可跨不同的 DeFi 协议工作，以获取尽可能好的收益。",
+      "jinxOverview": {
+        "header": "存入 FURY 来获取 FURYy 收益",
+        "body": "FURYy 是与 FURY 价格挂钩的锚定代币。 FURYy 可跨不同的 DeFi 协议工作，以获取尽可能好的收益。",
         "rewards": "您获得的收益将自动累积。",
-        "cta": "立即存入 FOX",
-        "foxyBalance": "FOXy 平衡",
+        "cta": "立即存入 FURY",
+        "jinxBalance": "FURYy 平衡",
         "withdrawals": "提款",
         "emptyWithdraws": "待处理或有效提款将在此处显示。",
         "availableDate": "有效 %{date}"
@@ -262,7 +262,7 @@
     "overview": "概述",
     "transactions": "交易",
     "tradeHistory": "交易记录",
-    "foxToken": "FOX Opportunities",
+    "furyToken": "FURY Opportunities",
     "featureFlags": "功能开关标志"
   },
   "transactionRow": {
@@ -303,7 +303,7 @@
       "thor": {
         "transferOut": "转出"
       },
-      "foxy": {
+      "jinx": {
         "stake": "质押",
         "unstake": "取消质押",
         "instantUnstake": "立即解除质押",

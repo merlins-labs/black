@@ -79,7 +79,7 @@ const MtPelerinSymbolToAssetIds: Record<string, AssetId[]> = {
 
 /**
  * The following is the list of assets that Mt Pelerin supports
- * but they're **not supported** (yet?) in ShapeShift
+ * but they're **not supported** (yet?) in 0x0eafe556aebc3fdd512006b78ed36990451fa3b8
  * {
     '[bsc_mainnet]/0x0000000000000000000000000000000000000000': 'BNB',
     '[bsc_mainnet]/0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d': 'USDC',

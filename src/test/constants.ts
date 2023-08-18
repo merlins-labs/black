@@ -1,4 +1,4 @@
-import { ethAssetId, ethChainId, foxAssetId } from '@shapeshiftoss/caip'
+import { ethAssetId, ethChainId, furyAssetId } from '@shapeshiftoss/caip'
 import type { Asset } from 'lib/asset-service'
 
 export const WETH: Asset = {
@@ -27,15 +27,15 @@ export const ETH: Asset = {
   explorerAddressLink: 'https://etherscan.io/address/',
 }
 
-export const FOX: Asset = {
+export const FURY: Asset = {
   chainId: ethChainId,
-  assetId: foxAssetId,
-  name: 'Fox',
+  assetId: furyAssetId,
+  name: 'Fury',
   precision: 18,
   color: '#FFFFFF',
-  icon: 'https://assets.coincap.io/assets/icons/fox@2x.png',
+  icon: 'https://assets.coincap.io/assets/icons/fury@2x.png',
   explorer: 'https://etherscan.io',
   explorerTxLink: 'https://etherscan.io/tx/',
   explorerAddressLink: 'https://etherscan.io/address/',
-  symbol: 'FOX',
+  symbol: 'FURY',
 }

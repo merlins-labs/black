@@ -9,12 +9,12 @@ import identity from 'lodash/identity'
 import orderBy from 'lodash/orderBy'
 import { PURGE } from 'redux-persist'
 import { getChainAdapterManager } from 'context/PluginProvider/chainAdapterSingleton'
-import type { RebaseHistory } from 'lib/investor/investor-foxy'
-import { foxyAddresses } from 'lib/investor/investor-foxy'
+import type { RebaseHistory } from 'lib/investor/investor-jinx'
+import { jinxAddresses } from 'lib/investor/investor-jinx'
 import type { PartialRecord } from 'lib/utils'
 import { deepUpsertArray, isSome } from 'lib/utils'
 import { BASE_RTK_CREATE_API_CONFIG } from 'state/apis/const'
-import { getFoxyApi } from 'state/apis/foxy/foxyApiSingleton'
+import { getJinxApi } from 'state/apis/jinx/jinxApiSingleton'
 import type { State } from 'state/apis/types'
 import type { Nominal } from 'types/common'
 
@@ -29,12 +29,12 @@ export type TxHistoryById = {
 
 /* this is a one to many relationship of an account and asset id to tx id
  *
- * e.g. an account with a single trade of FOX to USDC will produce the following
+ * e.g. an account with a single trade of FURY to USDC will produce the following
  * three related assets
  *
  * {
  *   0xfoobaraccount: {
- *     foxAssetId: [txid] // sell asset
+ *     furyAssetId: [txid] // sell asset
  *     usdcAssetId: [txid] // buy asset
  *     ethAssetId: [txid] // fee asset
  *   }
@@ -193,27 +193,27 @@ export const txHistoryApi = createApi({
   ...BASE_RTK_CREATE_API_CONFIG,
   reducerPath: 'txHistoryApi',
   endpoints: build => ({
-    getFoxyRebaseHistoryByAccountId: build.query<RebaseHistory[], RebaseTxHistoryArgs>({
+    getJinxRebaseHistoryByAccountId: build.query<RebaseHistory[], RebaseTxHistoryArgs>({
       queryFn: ({ accountId, portfolioAssetIds }, { dispatch }) => {
         const { chainId, account: userAddress } = fromAccountId(accountId)
-        // foxy is only on eth mainnet, and [] is a valid return type and won't upsert anything
+        // jinx is only on eth mainnet, and [] is a valid return type and won't upsert anything
         if (chainId !== ethChainId) return { data: [] }
-        // foxy contract address, note not assetIds
-        const foxyTokenContractAddress = (() => {
-          const contractAddress = foxyAddresses[0].foxy.toLowerCase()
+        // jinx contract address, note not assetIds
+        const jinxTokenContractAddress = (() => {
+          const contractAddress = jinxAddresses[0].jinx.toLowerCase()
           if (portfolioAssetIds.some(id => id.includes(contractAddress))) return contractAddress
         })()
 
-        // don't do anything below if we don't have FOXy as a portfolio AssetId
-        if (!foxyTokenContractAddress) return { data: [] }
+        // don't do anything below if we don't have FURYy as a portfolio AssetId
+        if (!jinxTokenContractAddress) return { data: [] }
 
-        // setup foxy api
-        const foxyApi = getFoxyApi()
+        // setup jinx api
+        const jinxApi = getJinxApi()
 
         ;(async () => {
-          const rebaseHistoryArgs = { userAddress, tokenContractAddress: foxyTokenContractAddress }
-          const data = await foxyApi.getRebaseHistory(rebaseHistoryArgs)
-          const assetReference = foxyTokenContractAddress
+          const rebaseHistoryArgs = { userAddress, tokenContractAddress: jinxTokenContractAddress }
+          const data = await jinxApi.getRebaseHistory(rebaseHistoryArgs)
+          const assetReference = jinxTokenContractAddress
           const assetNamespace = ASSET_NAMESPACE.erc20
           const assetId = toAssetId({ chainId, assetNamespace, assetReference })
           const upsertPayload = { accountId, assetId, data }

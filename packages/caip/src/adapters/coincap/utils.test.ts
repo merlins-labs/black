@@ -18,11 +18,11 @@ const makeEthMockCoincapResponse = () => ({
   explorer: 'https://etherscan.io/',
 })
 
-const makeFoxMockCoincapResponse = () => ({
-  id: 'fox-token',
+const makeFuryMockCoincapResponse = () => ({
+  id: 'fury-token',
   rank: '396',
-  symbol: 'FOX',
-  name: 'FOX Token',
+  symbol: 'FURY',
+  name: 'FURY Token',
   supply: '117022448.6044180000000000',
   maxSupply: '1000001337.0000000000000000',
   marketCapUsd: '76108238.1995641297877127',
@@ -30,7 +30,7 @@ const makeFoxMockCoincapResponse = () => ({
   priceUsd: '0.6503729763580659',
   changePercent24Hr: '-3.1066427856364231',
   vwap24Hr: '0.6546275575306273',
-  explorer: 'https://etherscan.io/token/0xc770eefad204b5180df6a14ee197d99d808ee52d',
+  explorer: 'https://etherscan.io/token/0x3c3dc25ca709de108f6fc9b04bef5976876b05b1',
 })
 
 const makeBtcMockCoincapResponse = () => ({
@@ -102,10 +102,10 @@ jest.mock('fs', () => ({
 describe('adapters:coincap:utils', () => {
   describe('parseEthData', () => {
     it('can parse eth data', () => {
-      const result = parseEthData([makeEthMockCoincapResponse(), makeFoxMockCoincapResponse()])
+      const result = parseEthData([makeEthMockCoincapResponse(), makeFuryMockCoincapResponse()])
       const expected = {
         'eip155:1/slip44:60': 'ethereum',
-        'eip155:1/erc20:0xc770eefad204b5180df6a14ee197d99d808ee52d': 'fox-token',
+        'eip155:1/erc20:0x3c3dc25ca709de108f6fc9b04bef5976876b05b1': 'fury-token',
       }
       expect(result).toEqual(expected)
     })
@@ -135,7 +135,7 @@ describe('adapters:coincap:utils', () => {
     it('can parse all data', () => {
       const result = parseData([
         makeEthMockCoincapResponse(),
-        makeFoxMockCoincapResponse(),
+        makeFuryMockCoincapResponse(),
         makeBtcMockCoincapResponse(),
         makeCosmosMockCoincapResponse(),
         makeOsmosisMockCoincapResponse(),
@@ -165,7 +165,7 @@ describe('adapters:coincap:utils', () => {
         },
         'eip155:1': {
           'eip155:1/slip44:60': 'ethereum',
-          'eip155:1/erc20:0xc770eefad204b5180df6a14ee197d99d808ee52d': 'fox-token',
+          'eip155:1/erc20:0x3c3dc25ca709de108f6fc9b04bef5976876b05b1': 'fury-token',
         },
       }
       expect(result).toEqual(expected)
@@ -180,7 +180,7 @@ describe('adapters:coincap:utils', () => {
           assetIdDef: 'efferium',
         },
         bar: {
-          assetIdGhi: 'fox',
+          assetIdGhi: 'fury',
           assetIdJkl: 'shib',
         },
       }

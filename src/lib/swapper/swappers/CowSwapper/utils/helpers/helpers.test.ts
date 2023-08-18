@@ -35,7 +35,7 @@ describe('utils', () => {
     it('should return the correct order digest', () => {
       const order: CowSwapOrder = {
         sellToken: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
-        buyToken: '0xc770eefad204b5180df6a14ee197d99d808ee52d',
+        buyToken: '0x3c3dc25ca709de108f6fc9b04bef5976876b05b1',
         sellAmount: '20200000000000000',
         buyAmount: '272522025311597443544',
         validTo: 1656667297,

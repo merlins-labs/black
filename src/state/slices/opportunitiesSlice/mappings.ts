@@ -16,20 +16,20 @@ import {
   cosmosSdkStakingOpportunitiesUserDataResolver,
 } from './resolvers/cosmosSdk'
 import {
-  ethFoxStakingMetadataResolver,
-  ethFoxStakingOpportunityIdsResolver,
-  ethFoxStakingUserDataResolver,
-} from './resolvers/ethFoxStaking'
-import {
-  foxyStakingOpportunitiesMetadataResolver,
-  foxyStakingOpportunitiesUserDataResolver,
-  foxyStakingOpportunityIdsResolver,
-} from './resolvers/foxy'
+  ethFuryStakingMetadataResolver,
+  ethFuryStakingOpportunityIdsResolver,
+  ethFuryStakingUserDataResolver,
+} from './resolvers/ethFuryStaking'
 import {
   idleStakingOpportunitiesMetadataResolver,
   idleStakingOpportunitiesUserDataResolver,
   idleStakingOpportunityIdsResolver,
 } from './resolvers/idle'
+import {
+  jinxStakingOpportunitiesMetadataResolver,
+  jinxStakingOpportunitiesUserDataResolver,
+  jinxStakingOpportunityIdsResolver,
+} from './resolvers/jinx'
 import {
   osmosisLpOpportunitiesMetadataResolver,
   osmosisLpOpportunityIdsResolver,
@@ -47,8 +47,8 @@ import {
 import { DefiProvider, DefiType } from './types'
 
 export const DefiProviderToMetadataResolverByDeFiType = {
-  [`${DefiProvider.EthFoxStaking}`]: {
-    [`${DefiType.Staking}`]: ethFoxStakingMetadataResolver,
+  [`${DefiProvider.EthFuryStaking}`]: {
+    [`${DefiType.Staking}`]: ethFuryStakingMetadataResolver,
   },
 }
 
@@ -69,7 +69,7 @@ export const DefiProviderToOpportunitiesMetadataResolverByDeFiType = {
     [`${DefiType.Staking}`]: thorchainSaversStakingOpportunitiesMetadataResolver,
   },
   [`${DefiProvider.ShapeShift}`]: {
-    [`${DefiType.Staking}`]: foxyStakingOpportunitiesMetadataResolver,
+    [`${DefiType.Staking}`]: jinxStakingOpportunitiesMetadataResolver,
   },
 }
 
@@ -78,7 +78,7 @@ export const DefiProviderToOpportunitiesUserDataResolverByDeFiType = {
     [`${DefiType.Staking}`]: idleStakingOpportunitiesUserDataResolver,
   },
   [`${DefiProvider.ShapeShift}`]: {
-    [`${DefiType.Staking}`]: foxyStakingOpportunitiesUserDataResolver,
+    [`${DefiType.Staking}`]: jinxStakingOpportunitiesUserDataResolver,
   },
   [`${DefiProvider.ThorchainSavers}`]: {
     [`${DefiType.Staking}`]: thorchainSaversStakingOpportunitiesUserDataResolver,
@@ -92,8 +92,8 @@ export const DefiProviderToOpportunityIdsResolverByDeFiType = {
   [`${DefiProvider.UniV2}`]: {
     [`${DefiType.LiquidityPool}`]: uniV2LpLpOpportunityIdsResolver,
   },
-  [`${DefiProvider.EthFoxStaking}`]: {
-    [`${DefiType.Staking}`]: ethFoxStakingOpportunityIdsResolver,
+  [`${DefiProvider.EthFuryStaking}`]: {
+    [`${DefiType.Staking}`]: ethFuryStakingOpportunityIdsResolver,
   },
   [`${DefiProvider.Idle}`]: {
     [`${DefiType.Staking}`]: idleStakingOpportunityIdsResolver,
@@ -105,7 +105,7 @@ export const DefiProviderToOpportunityIdsResolverByDeFiType = {
     [`${DefiType.Staking}`]: thorchainSaversOpportunityIdsResolver,
   },
   [`${DefiProvider.ShapeShift}`]: {
-    [`${DefiType.Staking}`]: foxyStakingOpportunityIdsResolver,
+    [`${DefiType.Staking}`]: jinxStakingOpportunityIdsResolver,
   },
   [`${DefiProvider.CosmosSdk}`]: {
     [`${DefiType.Staking}`]: cosmosSdkOpportunityIdsResolver,
@@ -116,8 +116,8 @@ export const DefiProviderToUserDataResolverByDeFiType = {
   [`${DefiProvider.UniV2}`]: {
     [`${DefiType.LiquidityPool}`]: uniV2LpUserDataResolver,
   },
-  [`${DefiProvider.EthFoxStaking}`]: {
-    [`${DefiType.Staking}`]: ethFoxStakingUserDataResolver,
+  [`${DefiProvider.EthFuryStaking}`]: {
+    [`${DefiType.Staking}`]: ethFuryStakingUserDataResolver,
   },
 }
 
@@ -158,7 +158,7 @@ export const CHAIN_ID_TO_SUPPORTED_DEFI_OPPORTUNITIES = {
       defiType: DefiType.LiquidityPool,
     },
     {
-      defiProvider: DefiProvider.EthFoxStaking,
+      defiProvider: DefiProvider.EthFuryStaking,
       defiType: DefiType.Staking,
     },
     {

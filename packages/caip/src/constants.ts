@@ -9,17 +9,19 @@ export const ltcAssetId: AssetId = 'bip122:12a765e31ffd4059bada1e25190f6e98/slip
 export const ethAssetId: AssetId = 'eip155:1/slip44:60'
 export const avalancheAssetId: AssetId = 'eip155:43114/slip44:60'
 export const optimismAssetId: AssetId = 'eip155:10/slip44:60'
+export const highburyAssetId: AssetId = 'eip155:710/slip44:60'
 export const bscAssetId: AssetId = 'eip155:56/slip44:60'
 export const polygonAssetId: AssetId = 'eip155:137/slip44:60'
 export const gnosisAssetId: AssetId = 'eip155:100/slip44:60'
-export const foxOnGnosisAssetId: AssetId =
-  'eip155:100/erc20:0x21a42669643f45bc0e086b8fc2ed70c23d67509d'
-export const foxAssetId: AssetId = 'eip155:1/erc20:0xc770eefad204b5180df6a14ee197d99d808ee52d'
-export const foxatarAssetId: AssetId =
-  'eip155:137/erc721:0x2e727c425a11ce6b8819b3004db332c12d2af2a2'
-export const foxyAssetId: AssetId = 'eip155:1/erc20:0xdc49108ce5c57bc3408c3a5e95f3d864ec386ed3'
+export const furyOnGnosisAssetId: AssetId =
+  'eip155:100/erc20:0xb8bb23d6ffada23258c5b22aa25ac8706962b358'
+export const furyAssetId: AssetId = 'eip155:1/erc20:0x3c3dc25ca709de108f6fc9b04bef5976876b05b1'
+export const furyatarAssetId: AssetId =
+  'eip155:137/erc721:0x2fb6405aaa9dbf754d3f3200dccd9a26eae0b63e'
+export const jinxAssetId: AssetId = 'eip155:1/erc20:0x0eafe556aebc3fdd512006b78ed36990451fa3b8'
 
 export const cosmosAssetId: AssetId = 'cosmos:cosmoshub-4/slip44:118'
+export const merlinsAssetId: AssetId = 'cosmos:merlins-1/slip44:118'
 export const osmosisAssetId: AssetId = 'cosmos:osmosis-1/slip44:118'
 export const thorchainAssetId: AssetId = 'cosmos:thorchain-mainnet-v1/slip44:931'
 export const binanceAssetId: AssetId = 'cosmos:binance-chain-tigris/slip44:714'
@@ -35,11 +37,13 @@ export const ltcChainId: ChainId = 'bip122:12a765e31ffd4059bada1e25190f6e98'
 export const ethChainId: ChainId = 'eip155:1'
 export const avalancheChainId: ChainId = 'eip155:43114'
 export const optimismChainId: ChainId = 'eip155:10'
+export const highburyChainId: ChainId = 'eip155:710/slip44:60'
 export const bscChainId: ChainId = 'eip155:56'
 export const polygonChainId: ChainId = 'eip155:137'
 export const gnosisChainId: ChainId = 'eip155:100'
 
 export const cosmosChainId: ChainId = 'cosmos:cosmoshub-4'
+export const merlinsChainId: ChainId = 'cosmos:merlins-1'
 export const osmosisChainId: ChainId = 'cosmos:osmosis-1'
 export const thorchainChainId: ChainId = 'cosmos:thorchain-mainnet-v1'
 export const binanceChainId: ChainId = 'cosmos:binance-chain-tigris'
@@ -61,7 +65,7 @@ export const CHAIN_REFERENCE = {
   EthereumMainnet: '1',
   EthereumRopsten: '3',
   EthereumRinkeby: '4',
-  // EthereumKovan: '42', // currently unsupported by ShapeShift
+  // EthereumKovan: '42', // currently unsupported by 0x0eafe556aebc3fdd512006b78ed36990451fa3b8
   // https://github.com/bitcoin/bips/blob/master/bip-0122.mediawiki#definition-of-chain-id
   // chainId uses max length of 32 chars of the genesis block
   BitcoinMainnet: '000000000019d6689c085ae165831e93',
@@ -71,6 +75,7 @@ export const CHAIN_REFERENCE = {
   LitecoinMainnet: '12a765e31ffd4059bada1e25190f6e98',
   CosmosHubMainnet: 'cosmoshub-4',
   CosmosHubVega: 'vega-testnet',
+  MerlinsMainnet: 'merlins-1',
   OsmosisMainnet: 'osmosis-1',
   OsmosisTestnet: 'osmo-testnet-1',
   ThorchainMainnet: 'thorchain-mainnet-v1',
@@ -84,6 +89,7 @@ export const CHAIN_REFERENCE = {
   SecretMainnet: 'secret-4', // https://docs.scrt.network/secret-network-documentation/development/api-endpoints
   SecretTestnet: 'pulsar-2', // https://docs.scrt.network/secret-network-documentation/development/api-endpoints
   OptimismMainnet: '10', //https://community.optimism.io/docs/useful-tools/networks/#optimism-mainnet
+  HighburyMainnet: '710', //https://community.optimism.io/docs/useful-tools/networks/#optimism-mainnet
   BnbSmartChainMainnet: '56', // https://docs.bnbchain.org/docs/wallet_api/#chain-ids
   PolygonMainnet: '137', // https://wiki.polygon.technology/docs/develop/metamask/config-polygon-on-metamask/
   GnosisMainnet: '100', // https://docs.gnosischain.com/tools/wallets/metamask/
@@ -110,6 +116,7 @@ export const ASSET_REFERENCE = {
   Ethereum: '60',
   Cosmos: '118',
   Osmosis: '118',
+  Merlins: '118',
   Thorchain: '931',
   BitcoinCash: '145',
   AvalancheC: '60', // evm chain which uses ethereum derivation path as common practice
@@ -118,6 +125,7 @@ export const ASSET_REFERENCE = {
   Terra: '330',
   Secret: '529',
   Optimism: '60', // evm chain which uses ethereum derivation path as common practice
+  Highbury: '60', // evm chain which uses ethereum derivation path as common practice
   BnbSmartChain: '60', // evm chain which uses ethereum derivation path as common practice
   Polygon: '60', // evm chain which uses ethereum derivation path as common practice
   Gnosis: '60', // evm chain which uses ethereum derivation path as common practice
@@ -137,6 +145,7 @@ export const VALID_CHAIN_IDS: ValidChainMap = Object.freeze({
     CHAIN_REFERENCE.EthereumRinkeby,
     CHAIN_REFERENCE.AvalancheCChain,
     CHAIN_REFERENCE.OptimismMainnet,
+    CHAIN_REFERENCE.HighburyMainnet,
     CHAIN_REFERENCE.BnbSmartChainMainnet,
     CHAIN_REFERENCE.PolygonMainnet,
     CHAIN_REFERENCE.GnosisMainnet,
@@ -144,6 +153,7 @@ export const VALID_CHAIN_IDS: ValidChainMap = Object.freeze({
   [CHAIN_NAMESPACE.CosmosSdk]: [
     CHAIN_REFERENCE.CosmosHubMainnet,
     CHAIN_REFERENCE.CosmosHubVega,
+    CHAIN_REFERENCE.MerlinsMainnet,
     CHAIN_REFERENCE.OsmosisMainnet,
     CHAIN_REFERENCE.OsmosisTestnet,
     CHAIN_REFERENCE.ThorchainMainnet,

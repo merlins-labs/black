@@ -5,4 +5,5 @@ export * as cosmossdk from './types'
 
 export * as cosmos from './cosmos'
 export * as osmosis from './osmosis'
+export * as merlins from './merlins'
 export * as thorchain from './thorchain'

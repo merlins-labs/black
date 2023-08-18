@@ -28,13 +28,13 @@ describe('adapters:coincap', () => {
       expect(coincapToAssetId('ethereum')).toEqual(assetId)
     })
 
-    it('can get AssetId id for FOX', () => {
+    it('can get AssetId id for FURY', () => {
       const chainNamespace = CHAIN_NAMESPACE.Evm
       const chainReference = CHAIN_REFERENCE.EthereumMainnet
       const assetNamespace = 'erc20'
-      const assetReference = '0xc770eefad204b5180df6a14ee197d99d808ee52d'
+      const assetReference = '0x3c3dc25ca709de108f6fc9b04bef5976876b05b1'
       const assetId = toAssetId({ chainNamespace, chainReference, assetNamespace, assetReference })
-      expect(coincapToAssetId('fox-token')).toEqual(assetId)
+      expect(coincapToAssetId('fury-token')).toEqual(assetId)
     })
   })
 
@@ -87,13 +87,13 @@ describe('adapters:coincap', () => {
       expect(assetIdToCoinCap(assetId)).toEqual('ethereum')
     })
 
-    it('can get coincap id for FOX', () => {
+    it('can get coincap id for FURY', () => {
       const chainNamespace = CHAIN_NAMESPACE.Evm
       const chainReference = CHAIN_REFERENCE.EthereumMainnet
       const assetNamespace = 'erc20'
-      const assetReference = '0xc770eefad204b5180df6a14ee197d99d808ee52d'
+      const assetReference = '0x3c3dc25ca709de108f6fc9b04bef5976876b05b1'
       const assetId = toAssetId({ chainNamespace, chainReference, assetNamespace, assetReference })
-      expect(assetIdToCoinCap(assetId)).toEqual('fox-token')
+      expect(assetIdToCoinCap(assetId)).toEqual('fury-token')
     })
 
     it('can get coincap id for cosmos AssetId', () => {

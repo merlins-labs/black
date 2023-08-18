@@ -1,12 +1,12 @@
 import type { AssetId } from '@shapeshiftoss/caip'
-import { ethAssetId, foxAssetId } from '@shapeshiftoss/caip'
+import { ethAssetId, furyAssetId } from '@shapeshiftoss/caip'
 import type { HistoryData } from '@shapeshiftoss/types'
 import { HistoryTimeframe } from '@shapeshiftoss/types'
-import { ethereum, fox } from 'test/mocks/assets'
-import { ethereumTransactions, FOXSend } from 'test/mocks/txs'
+import { ethereum, fury } from 'test/mocks/assets'
+import { ethereumTransactions, FURYSend } from 'test/mocks/txs'
 import type { Asset } from 'lib/asset-service'
 import { bn } from 'lib/bignumber/bignumber'
-import type { RebaseHistory } from 'lib/investor/investor-foxy'
+import type { RebaseHistory } from 'lib/investor/investor-jinx'
 import type { PriceHistoryData } from 'state/slices/marketDataSlice/types'
 
 import type { Bucket } from './useBalanceChartData'
@@ -48,17 +48,17 @@ describe('bucketTxs', () => {
   afterAll(() => jest.useRealTimers())
 
   it('can bucket txs', () => {
-    const transfer = FOXSend.transfers[0]
+    const transfer = FURYSend.transfers[0]
     const value = transfer.value
 
     const balances = {
-      [foxAssetId]: value,
+      [furyAssetId]: value,
     }
-    const assetIds = [foxAssetId]
+    const assetIds = [furyAssetId]
     const timeframe = HistoryTimeframe.YEAR
     const buckets = makeBuckets({ assetIds, balances, timeframe })
 
-    const txs = [FOXSend]
+    const txs = [FURYSend]
     const rebases: RebaseHistory[] = []
 
     const bucketedTxs = bucketEvents(txs, rebases, buckets)
@@ -83,25 +83,25 @@ describe('calculateBucketPrices', () => {
   afterAll(() => jest.useRealTimers())
 
   it('has balance of single tx at start of chart, balance of 0 at end of chart', () => {
-    const transfer = FOXSend.transfers[0]
+    const transfer = FURYSend.transfers[0]
     const value = transfer.value
 
     const balances = {
-      [foxAssetId]: '0',
+      [furyAssetId]: '0',
     }
-    const assetIds = [foxAssetId]
+    const assetIds = [furyAssetId]
     const timeframe = HistoryTimeframe.YEAR
     const emptyBuckets = makeBuckets({ assetIds, balances, timeframe })
 
-    const txs = [FOXSend]
+    const txs = [FURYSend]
 
     const cryptoPriceHistoryData: PriceHistoryData = {
-      [foxAssetId]: [{ price: 0, date: Number() }],
+      [furyAssetId]: [{ price: 0, date: Number() }],
     }
     const fiatPriceHistoryData: HistoryData[] = [{ price: 0, date: Number() }]
 
     const portfolioAssets: Record<AssetId, Asset> = {
-      [foxAssetId]: fox,
+      [furyAssetId]: fury,
     }
 
     const rebases: RebaseHistory[] = []
@@ -116,9 +116,9 @@ describe('calculateBucketPrices', () => {
       selectedCurrency: 'USD',
     })
 
-    expect(calculatedBuckets[0].balance.crypto[foxAssetId].toFixed(0)).toEqual(value)
+    expect(calculatedBuckets[0].balance.crypto[furyAssetId].toFixed(0)).toEqual(value)
     expect(
-      calculatedBuckets[calculatedBuckets.length - 1].balance.crypto[foxAssetId].toFixed(0),
+      calculatedBuckets[calculatedBuckets.length - 1].balance.crypto[furyAssetId].toFixed(0),
     ).toEqual(value)
   })
 

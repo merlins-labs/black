@@ -32,9 +32,9 @@ export const LpCard: React.FC<LpCardProps> = props => {
     switch (provider) {
       case DefiProvider.UniV2:
         return {
-          title: 'arkeo.foxEthProviders.title',
-          body: 'arkeo.foxEthProviders.body',
-          cta: 'arkeo.foxEthProviders.cta',
+          title: 'arkeo.furyEthProviders.title',
+          body: 'arkeo.furyEthProviders.body',
+          cta: 'arkeo.furyEthProviders.cta',
         }
       case DefiProvider.OsmosisLp:
         return {

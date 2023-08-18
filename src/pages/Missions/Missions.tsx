@@ -16,10 +16,10 @@ import type { PropsWithChildren } from 'react'
 import { useMemo } from 'react'
 import { useTranslate } from 'react-polyglot'
 import { NavLink } from 'react-router-dom'
-import FoxMissionsBg from 'assets/fox-mission-bg.jpg'
-import FoxArmyBg from 'assets/foxarmy-bg.png'
-import FoxAtarBg from 'assets/foxatar-card-bg.png'
-import FoxRewardsBg from 'assets/foxrewards-mission.png'
+import FuryMissionsBg from 'assets/fury-mission-bg.jpg'
+import FuryArmyBg from 'assets/furyarmy-bg.png'
+import FuryAtarBg from 'assets/furyatar-card-bg.png'
+import FuryRewardsBg from 'assets/furyrewards-mission.png'
 import SponsorBg from 'assets/mission-sponsor-bg.jpg'
 import OptimismBg from 'assets/op-card-bg.png'
 import YatBg from 'assets/yat-mission-bg.png'
@@ -30,7 +30,7 @@ import { SEO } from 'components/Layout/Seo'
 import type { FeatureListProps } from 'components/ScrollCarousel/ScrollCarousel'
 import { ScrollCarousel } from 'components/ScrollCarousel/ScrollCarousel'
 import { RawText } from 'components/Text'
-import { FOX_MISSION_REQUEST_PAGE } from 'pages/Missions/constants'
+import { FURY_MISSION_REQUEST_PAGE } from 'pages/Missions/constants'
 
 import type { MissionProps } from './Mission'
 import { Mission } from './Mission'
@@ -47,10 +47,10 @@ export const useGetMissions = () => {
   const missionItems: MissionProps[] = useMemo(() => {
     return [
       {
-        title: translate('missions.foxatar.title'),
-        subtitle: translate('missions.foxatar.subtitle'),
-        buttonText: translate('missions.foxatar.cta'),
-        coverImage: FoxAtarBg,
+        title: translate('missions.furyatar.title'),
+        subtitle: translate('missions.furyatar.subtitle'),
+        buttonText: translate('missions.furyatar.cta'),
+        coverImage: FuryAtarBg,
         onClick: () => window.open('https://app.mercle.xyz/shapeshift/events'),
       },
       {
@@ -58,7 +58,7 @@ export const useGetMissions = () => {
         subtitle: translate('missions.optimism.subtitle'),
         buttonText: translate('missions.optimism.cta'),
         coverImage: OptimismBg,
-        onClick: () => window.open('https://rewards.shapeshift.com/optimistic-fox-1'),
+        onClick: () => window.open('https://rewards.shapeshift.com/optimistic-fury-1'),
         endDate: '2023-07-04 05:59 PM',
       },
       {
@@ -66,15 +66,15 @@ export const useGetMissions = () => {
         subtitle: translate('missions.optimism.subtitle'),
         buttonText: translate('missions.optimism.cta'),
         coverImage: OptimismBg,
-        onClick: () => window.open('https://rewards.shapeshift.com/optimistic-fox-2'),
+        onClick: () => window.open('https://rewards.shapeshift.com/optimistic-fury-2'),
         startDate: '2023-07-04 05:59 PM',
         endDate: '2023-07-31 05:59 PM',
       },
       {
-        title: translate('missions.foxArmy.title'),
-        subtitle: translate('missions.foxArmy.subtitle'),
-        buttonText: translate('missions.foxArmy.cta'),
-        coverImage: FoxArmyBg,
+        title: translate('missions.furyArmy.title'),
+        subtitle: translate('missions.furyArmy.subtitle'),
+        buttonText: translate('missions.furyArmy.cta'),
+        coverImage: FuryArmyBg,
         onClick: () =>
           window.open(
             'https://x.postmint.xyz/community/64665c31a6c1394b3a35be58/64997a2a590fc8641c50f51a',
@@ -90,10 +90,10 @@ export const useGetMissions = () => {
         onClick: () => window.open('https://fantasy.y.at/invite/yduad7mm'),
       },
       {
-        title: translate('missions.foxRewards.title'),
-        subtitle: translate('missions.foxRewards.subtitle'),
-        buttonText: translate('missions.foxRewards.cta'),
-        coverImage: FoxRewardsBg,
+        title: translate('missions.furyRewards.title'),
+        subtitle: translate('missions.furyRewards.subtitle'),
+        buttonText: translate('missions.furyRewards.cta'),
+        coverImage: FuryRewardsBg,
         startDate: '2025-01-01 7:00 AM',
         onClick: () => window.open('https://app.shapeshift.com'),
       },
@@ -155,7 +155,7 @@ const MissionCarouselHeader: React.FC<CarouselHeaderProps> = ({ controls }) => {
     <Flex alignItems='center' justifyContent='space-between' width='full'>
       <Flex alignItems='center' gap={4}>
         <Heading as='h4' fontSize='md'>
-          {translate('navBar.foxMissions')}
+          {translate('navBar.furyMissions')}
         </Heading>
         <Button as={NavLink} to='/missions' variant='link' colorScheme='blue'>
           {translate('common.viewAll')}
@@ -207,7 +207,7 @@ export const Missions = () => {
             key='sponsored'
             title={translate('missions.getListed.title')}
             subtitle={translate('missions.getListed.subtitle')}
-            onClick={() => window.open(FOX_MISSION_REQUEST_PAGE)}
+            onClick={() => window.open(FURY_MISSION_REQUEST_PAGE)}
             buttonText={translate('missions.getListed.cta')}
             coverImage={SponsorBg}
           />
@@ -231,7 +231,7 @@ export const Missions = () => {
       >
         <Box
           mt='-4.5rem'
-          bgImage={FoxMissionsBg}
+          bgImage={FuryMissionsBg}
           backgroundSize={backgroundSize}
           backgroundRepeat='no-repeat'
           backgroundPosition={backgroundPosition}

@@ -281,22 +281,22 @@
         "emptyWithdraws": "Pending unstaking requests will show here.",
         "availableDate": "available %{date}"
       },
-      "foxyOverview": {
-        "header": "Deposit FOX to get FOXy to earn",
-        "body": "FOXy is a rebasing token pegged to the price of FOX. Staked FOX is put to work across different DeFi protocols to earn the best yield possible.",
+      "jinxOverview": {
+        "header": "Deposit FURY to get FURYy to earn",
+        "body": "FURYy is a rebasing token pegged to the price of FURY. Staked FURY is put to work across different DeFi protocols to earn the best yield possible.",
         "rewards": "The rewards you earn will accrue automatically.",
-        "cta": "Deposit FOX Now",
-        "foxyBalance": "FOXy Balance",
+        "cta": "Deposit FURY Now",
+        "jinxBalance": "FURYy Balance",
         "withdrawals": "Withdrawals",
         "emptyWithdraws": "Pending or active withdrawals will show here.",
         "availableDate": "available %{date}"
       },
-      "foxFarmingOverview": {
-        "header": "Deposit ETH-FOX LP tokens to %{opportunity} to earn",
-        "body": "Approve and stake your liquidity tokens to earn bonus FOX rewards.",
+      "furyFarmingOverview": {
+        "header": "Deposit ETH-FURY LP tokens to %{opportunity} to earn",
+        "body": "Approve and stake your liquidity tokens to earn bonus FURY rewards.",
         "rewards": "The rewards you earn will accrue automatically.",
-        "cta": "Deposit ETH-FOX LP tokens Now",
-        "foxFarmingBalance": "ETH-FOX LP tokens Balance",
+        "cta": "Deposit ETH-FURY LP tokens Now",
+        "furyFarmingBalance": "ETH-FURY LP tokens Balance",
         "withdrawals": "Withdrawals",
         "emptyWithdraws": "Pending or active withdrawals will show here.",
         "availableDate": "available %{date}"
@@ -407,7 +407,7 @@
     "earnBalance": "Earn Balance",
     "rewardsBalance": "Rewards Balance",
     "earnBody": "Earn passive income by staking your assets or depositing them into a DeFi strategy.",
-    "clickHereToEarn": "Click here to earn %{apr} APR* by farming your ETH-FOX liquidity pool tokens",
+    "clickHereToEarn": "Click here to earn %{apr} APR* by farming your ETH-FURY liquidity pool tokens",
     "overview": "Overview",
     "myPositions": "My Positions",
     "myPositionsBody": "Your active positions will appear here.",
@@ -502,7 +502,7 @@
     "overview": "Overview",
     "transactions": "Transactions",
     "tradeHistory": "Trade History",
-    "foxToken": "FOX Opportunities",
+    "furyToken": "FURY Opportunities",
     "dApps": "dApps",
     "featureFlags": "Feature Flags",
     "demoMode": "Demo Mode",
@@ -515,8 +515,8 @@
     "buyCrypto": "Buy/Sell Crypto",
     "buyCryptoShort": "Buy/Sell",
     "arkeo": "Arkeo Airdrop",
-    "foxMissions": "FOX Missions",
-    "foxMissionsShort": "Missions"
+    "furyMissions": "FURY Missions",
+    "furyMissionsShort": "Missions"
   },
   "transactionRow": {
     "send": "Sent",
@@ -567,7 +567,7 @@
       "thor": {
         "transferOut": "Transfer out"
       },
-      "foxy": {
+      "jinx": {
         "stake": "Stake",
         "unstake": "Unstake",
         "instantUnstake": "Instant Unstake",
@@ -1622,16 +1622,16 @@
     "transfers": "Transfers"
   },
   "plugins": {
-    "foxPage": {
+    "furyPage": {
       "buyAssetOnCoinbase": "Buy %{assetSymbol} on Coinbase",
-      "totalFoxValue": "Total Fox Value",
-      "foxToken": "ShapeShift %{assetSymbol} Token",
-      "foxDescription": "Since 2019, our shapeshifting FOX Token has been offering users an ever-expanding world of utility and advantages. Today, our ERC-20 governance token not only enables you to influence the future of ShapeShift through your vote, you also have an ever-expanding universe of investing opportunities. Invest, track, and manage your FOX holdings here.",
+      "totalFuryValue": "Total Fury Value",
+      "furyToken": "ShapeShift %{assetSymbol} Token",
+      "furyDescription": "Since 2019, our shapeshifting FURY Token has been offering users an ever-expanding world of utility and advantages. Today, our ERC-20 governance token not only enables you to influence the future of ShapeShift through your vote, you also have an ever-expanding universe of investing opportunities. Invest, track, and manage your FURY holdings here.",
       "getAsset": "Get %{assetSymbol}",
       "trade": "Trade",
       "receive": "Receive",
       "mainStakingTitle": "%{assetSymbol} Token Staking",
-      "mainStakingDescription": "Put your FOX to work in single-sided staking contracts to earn FOX rewards. (FOX can still be used in governance while staked, but is otherwise locked into the contract during staking.)",
+      "mainStakingDescription": "Put your FURY to work in single-sided staking contracts to earn FURY rewards. (FURY can still be used in governance while staked, but is otherwise locked into the contract during staking.)",
       "tvl": "TVL",
       "currentApy": "Current APY",
       "balance": "Balance",
@@ -1641,30 +1641,30 @@
       "tradingUnavailable": "%{assetSymbol} is not yet tradeable on ShapeShift. You can trade %{assetSymbol} on ElasticSwap.",
       "tradeOnElasticSwap": "Trade %{assetSymbol} on ElasticSwap",
       "otherOpportunitiesTitle": {
-        "FOX": "Other Opportunities",
-        "FOXy": "Opportunities"
+        "FURY": "Other Opportunities",
+        "FURYy": "Opportunities"
       },
       "otherOpportunitiesDescription": {
-        "FOX": "Explore the many opportunities for providing liquidity, farming for yield, lending and borrowing. Click the “Get Started” links below to visit the external sites of interest to learn more—and put your FOX to work for you.",
-        "FOXy": "Quickly and easily purchase FOXy, the industry’s first DAO rebasing token that offers both yield and profit rewards."
+        "FURY": "Explore the many opportunities for providing liquidity, farming for yield, lending and borrowing. Click the “Get Started” links below to visit the external sites of interest to learn more—and put your FURY to work for you.",
+        "FURYy": "Quickly and easily purchase FURYy, the industry’s first DAO rebasing token that offers both yield and profit rewards."
       },
       "liquidityPools": "Liquidity Pools",
       "farming": "Farming",
       "borrowingAndLending": "Borrowing & Lending",
       "governanceTitle": "Governance",
-      "governanceDescription": "As a FOX holder, you can have a voice in the future of ShapeShift. Below are active or recently passed DAO proposals voted on by token holders.",
+      "governanceDescription": "As a FURY holder, you can have a voice in the future of ShapeShift. Below are active or recently passed DAO proposals voted on by token holders.",
       "seeAllProposals": "See All Proposals",
       "availableToTradeOn": "Available to Trade On",
       "dex": "DEX",
       "centralized": "Centralized",
       "dappBack": {
-        "title": "✨ Get FOX rewards + more! ✨",
-        "body": "Earn FOX rewards by completing tasks on DappBack",
+        "title": "✨ Get FURY rewards + more! ✨",
+        "body": "Earn FURY rewards by completing tasks on DappBack",
         "cta": "Launch DappBack"
       },
       "bondProtocol": {
-        "title": "Buy FOX at a Discount!",
-        "body": "Buy FOX at a discount with BondProtocol",
+        "title": "Buy FURY at a Discount!",
+        "body": "Buy FURY at a discount with BondProtocol",
         "cta": "Launch BondProtocol"
       }
     },
@@ -1933,28 +1933,28 @@
     },
     "lp": {
       "title": "%{asset1}/%{asset2} Providers",
-      "body": "Got %{asset1} and %{asset2}? Provide liquidity to the Uniswap V2 Pool to earn %{apy} APR. PLUS the underlying FOX in the FOX/ETH LP tokens you hold will qualify for the Arkeo airdrop.",
+      "body": "Got %{asset1} and %{asset2}? Provide liquidity to the Uniswap V2 Pool to earn %{apy} APR. PLUS the underlying FURY in the FURY/ETH LP tokens you hold will qualify for the Arkeo airdrop.",
       "cta": "Deposit Liquidity"
     },
-    "foxTokenHolders": {
-      "title": "FOX Token Holders",
-      "body": "Hodling FOX tokens. The larger your bag, the larger your Arkeo airdrop.",
-      "cta": "Trade for FOX",
-      "secondary": "Buy FOX"
+    "furyTokenHolders": {
+      "title": "FURY Token Holders",
+      "body": "Hodling FURY tokens. The larger your bag, the larger your Arkeo airdrop.",
+      "cta": "Trade for FURY",
+      "secondary": "Buy FURY"
     },
-    "foxFarmers": {
-      "title": "FOX/ETH LP Farmers",
-      "body": "Earn up to %{apy} APR for staking your ETH/FOX LP tokens in the FOX Farm. PLUS the underlying FOX in the ETH/FOX LP tokens you stake in Round 5 of the FOX Farm will qualify for the Arkeo airdrop.",
-      "cta": "Stake FOX/ETH LP"
+    "furyFarmers": {
+      "title": "FURY/ETH LP Farmers",
+      "body": "Earn up to %{apy} APR for staking your ETH/FURY LP tokens in the FURY Farm. PLUS the underlying FURY in the ETH/FURY LP tokens you stake in Round 5 of the FURY Farm will qualify for the Arkeo airdrop.",
+      "cta": "Stake FURY/ETH LP"
     },
-    "foxyTokenHolders": {
-      "title": "FOXy Token Holders",
-      "body": "Earn up to %{apy} APR on your idle FOX with FOX Yieldy (FOXy). PLUS FOXy held in your wallet will be treated the same as FOX and will qualify for the Arkeo airdrop.",
-      "cta": "Stake FOX Tokens"
+    "jinxTokenHolders": {
+      "title": "FURYy Token Holders",
+      "body": "Earn up to %{apy} APR on your idle FURY with FURY Yieldy (FURYy). PLUS FURYy held in your wallet will be treated the same as FURY and will qualify for the Arkeo airdrop.",
+      "cta": "Stake FURY Tokens"
     },
-    "foxEthProviders": {
-      "title": "FOX/ETH Uniswap V2 LPs",
-      "body": "Got %{asset1} and %{asset2}? Provide liquidity to the Uniswap V2 Pool to earn %{apy} APR. PLUS the underlying FOX in the FOX/ETH LP tokens you hold will qualify for the Arkeo airdrop.",
+    "furyEthProviders": {
+      "title": "FURY/ETH Uniswap V2 LPs",
+      "body": "Got %{asset1} and %{asset2}? Provide liquidity to the Uniswap V2 Pool to earn %{apy} APR. PLUS the underlying FURY in the FURY/ETH LP tokens you hold will qualify for the Arkeo airdrop.",
       "cta": "Deposit Liquidity"
     },
     "atomOsmoProviders": {
@@ -1981,7 +1981,7 @@
     }
   },
   "nft": {
-    "customizeFoxatar": "Customize FOXatar",
+    "customizeFuryatar": "Customize FURYatar",
     "setAsAvatar": "Set as Avatar",
     "floorPrice": "Floor Price",
     "lastPrice": "Last Price",
@@ -2000,7 +2000,7 @@
     "emptyBody": "Don't worry, we've sent out a search party to bring back more amazing NFTs. In the meantime, feel free to stare at this blank space and ponder the meaning of existence."
   },
   "missions": {
-    "subtitle": "FOX Missions",
+    "subtitle": "FURY Missions",
     "missionEnded": "Mission Ended",
     "viewMission": "View Mission",
     "comingSoon": "Coming Soon",
@@ -2018,14 +2018,14 @@
       "subtitle": "Explore Optimism",
       "cta": "Start Mission"
     },
-    "foxatar": {
+    "furyatar": {
       "title": "Get a Free & Customizable NFT",
-      "subtitle": "Mint a FOXatar",
+      "subtitle": "Mint a FURYatar",
       "cta": "Start Mission"
     },
-    "foxArmy": {
-      "subtitle": "Join the FOX Army",
-      "title": "20,000 FOX Pool",
+    "furyArmy": {
+      "subtitle": "Join the FURY Army",
+      "title": "20,000 FURY Pool",
       "cta": "Start Mission"
     },
     "yat": {
@@ -2038,9 +2038,9 @@
       "title": "Launch a Mission for Your Project",
       "cta": "Submit Project"
     },
-    "foxRewards": {
+    "furyRewards": {
       "subtitle": "Buy, sell, trade, earn, and more",
-      "title": "Earn FOX",
+      "title": "Earn FURY",
       "cta": "Start Mission"
     }
   },

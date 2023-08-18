@@ -6,7 +6,7 @@ import bnbsmartchain from 'plugins/bnbsmartchain'
 import cosmos from 'plugins/cosmos'
 import dogecoin from 'plugins/dogecoin'
 import ethereum from 'plugins/ethereum'
-import foxPage from 'plugins/foxPage'
+import furyPage from 'plugins/furyPage'
 import gnosis from 'plugins/gnosis'
 import litecoin from 'plugins/litecoin'
 import mobile from 'plugins/mobile'
@@ -23,7 +23,7 @@ export const activePlugins = [
   dogecoin,
   litecoin,
   ethereum,
-  foxPage,
+  furyPage,
   osmosis,
   polygon,
   gnosis,

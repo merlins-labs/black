@@ -51,8 +51,10 @@ export const generateAssetIdFromOsmosisDenom = (denom: string): AssetId => {
 export const bitcoinAssetMap = { [constants.btcAssetId]: 'bitcoin' }
 export const bitcoinCashAssetMap = { [constants.bchAssetId]: 'bitcoin-cash' }
 export const dogecoinAssetMap = { [constants.dogeAssetId]: 'dogecoin' }
+export const highburyAssetMap = { [constants.highburyAssetId]: 'highbury' }
 export const litecoinAssetMap = { [constants.ltcAssetId]: 'litecoin' }
 export const cosmosAssetMap = { [constants.cosmosAssetId]: 'cosmos' }
+export const merlinsAssetMap = { [constants.merlinsAssetId]: 'merlins' }
 export const osmosisAssetMap = { [constants.osmosisAssetId]: 'osmosis' }
 export const thorchainAssetMap = { [constants.thorchainAssetId]: 'thorchain' }
 

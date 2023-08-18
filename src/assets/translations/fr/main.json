@@ -281,22 +281,22 @@
         "emptyWithdraws": "Les demandes de démise en attente s'affichent ici.",
         "availableDate": "disponible %{date}"
       },
-      "foxyOverview": {
-        "header": "Déposer du FOX pour obtenir du FOXy afin de gagner",
-        "body": "FOXy est un jeton de rebasage indexé sur le prix de FOX. Les FOX misés sont mis à contribution sur différents protocoles DeFi pour obtenir le meilleur rendement possible.",
+      "jinxOverview": {
+        "header": "Déposer du FURY pour obtenir du FURYy afin de gagner",
+        "body": "FURYy est un jeton de rebasage indexé sur le prix de FURY. Les FURY misés sont mis à contribution sur différents protocoles DeFi pour obtenir le meilleur rendement possible.",
         "rewards": "Les récompenses que vous gagnez s'accumuleront automatiquement.",
-        "cta": "Déposer des FOX maintenant",
-        "foxyBalance": "Solde FOXy",
+        "cta": "Déposer des FURY maintenant",
+        "jinxBalance": "Solde FURYy",
         "withdrawals": "Retraits",
         "emptyWithdraws": "Les retraits en attente ou actifs s'afficheront ici.",
         "availableDate": "disponible %{date}"
       },
-      "foxFarmingOverview": {
-        "header": "Déposer des jetons LP ETH-FOX dans %{opportunity} pour gagner",
-        "body": "Autorisez et misez vos jetons de liquidité pour gagner des récompenses bonus en FOX.",
+      "furyFarmingOverview": {
+        "header": "Déposer des jetons LP ETH-FURY dans %{opportunity} pour gagner",
+        "body": "Autorisez et misez vos jetons de liquidité pour gagner des récompenses bonus en FURY.",
         "rewards": "Les récompenses que vous gagnez s'accumuleront automatiquement.",
-        "cta": "Déposer des jetons LP ETH-FOX maintenant",
-        "foxFarmingBalance": "Solde de jetons LP ETH-FOX",
+        "cta": "Déposer des jetons LP ETH-FURY maintenant",
+        "furyFarmingBalance": "Solde de jetons LP ETH-FURY",
         "withdrawals": "Retraits",
         "emptyWithdraws": "Les retraits en attente ou actifs s'afficheront ici.",
         "availableDate": "disponible %{date}"
@@ -407,7 +407,7 @@
     "earnBalance": "Solde dans Gagner",
     "rewardsBalance": "Solde des récompenses",
     "earnBody": "Gagnez des revenus passifs en misant vos actifs ou en les déposant dans une stratégie DeFi.",
-    "clickHereToEarn": "Cliquez ici pour gagner %{apr} d'APR* avec le farming de vos jetons de pool de liquidités ETH-FOX",
+    "clickHereToEarn": "Cliquez ici pour gagner %{apr} d'APR* avec le farming de vos jetons de pool de liquidités ETH-FURY",
     "overview": "Vue d'ensemble",
     "myPositions": "Mes positions",
     "myPositionsBody": "Vos positions actives apparaîtront ici.",
@@ -502,7 +502,7 @@
     "overview": "Vue d'ensemble",
     "transactions": "Transactions",
     "tradeHistory": "Historique des échanges",
-    "foxToken": "Opportunités FOX",
+    "furyToken": "Opportunités FURY",
     "dApps": "dApps",
     "featureFlags": "Indicateurs de fonctionnalité",
     "demoMode": "Mode démo",
@@ -515,8 +515,8 @@
     "buyCrypto": "Acheter/Vendre des cryptos",
     "buyCryptoShort": "Achat/Vente",
     "arkeo": "Airdrop Arkeo",
-    "foxMissions": "Missions FOX",
-    "foxMissionsShort": "Missions"
+    "furyMissions": "Missions FURY",
+    "furyMissionsShort": "Missions"
   },
   "transactionRow": {
     "send": "Envoi",
@@ -567,7 +567,7 @@
       "thor": {
         "transferOut": "Transfert sortant"
       },
-      "foxy": {
+      "jinx": {
         "stake": "Mise",
         "unstake": "Démise",
         "instantUnstake": "Démise instantanée",
@@ -1614,16 +1614,16 @@
     "transfers": "Transferts"
   },
   "plugins": {
-    "foxPage": {
+    "furyPage": {
       "buyAssetOnCoinbase": "Acheter %{assetSymbol} sur Coinbase",
-      "totalFoxValue": "Valeur totale des FOX",
-      "foxToken": "Jeton %{assetSymbol} de ShapeShift",
-      "foxDescription": "Depuis 2019, notre jeton FOX offre aux utilisateurs un éventail toujours plus vaste d'utilités et d'avantages. Aujourd'hui, notre jeton de gouvernance ERC-20 vous permet non seulement d'influencer l'avenir de ShapeShift par votre vote, mais vous disposez également d'un univers toujours plus vaste d'opportunités d'investissement. Investissez, suivez et gérez vos avoirs FOX ici.",
+      "totalFuryValue": "Valeur totale des FURY",
+      "furyToken": "Jeton %{assetSymbol} de ShapeShift",
+      "furyDescription": "Depuis 2019, notre jeton FURY offre aux utilisateurs un éventail toujours plus vaste d'utilités et d'avantages. Aujourd'hui, notre jeton de gouvernance ERC-20 vous permet non seulement d'influencer l'avenir de ShapeShift par votre vote, mais vous disposez également d'un univers toujours plus vaste d'opportunités d'investissement. Investissez, suivez et gérez vos avoirs FURY ici.",
       "getAsset": "Obtenir du %{assetSymbol}",
       "trade": "Échanger",
       "receive": "Recevoir",
       "mainStakingTitle": "Mises de jetons %{assetSymbol}",
-      "mainStakingDescription": "Mettez votre FOX au travail dans des contrats de mise unilatéraux pour gagner des récompenses FOX. (vos FOX peuvent toujours être utilisés pour la gouvernance lorsqu'ils sont misés, mais ils sont autrement verrouillés dans le contrat durant la mise.)",
+      "mainStakingDescription": "Mettez votre FURY au travail dans des contrats de mise unilatéraux pour gagner des récompenses FURY. (vos FURY peuvent toujours être utilisés pour la gouvernance lorsqu'ils sont misés, mais ils sont autrement verrouillés dans le contrat durant la mise.)",
       "tvl": "TVL",
       "currentApy": "APY actuel",
       "balance": "Solde",
@@ -1633,30 +1633,30 @@
       "tradingUnavailable": "Les %{assetSymbol} ne sont pas encore échangeables sur ShapeShift. Vous pouvez échanger des %{assetSymbol} sur ElasticSwap.",
       "tradeOnElasticSwap": "Échanger des %{assetSymbol} sur ElasticSwap",
       "otherOpportunitiesTitle": {
-        "FOX": "Autres opportunités",
-        "FOXy": "Opportunités"
+        "FURY": "Autres opportunités",
+        "FURYy": "Opportunités"
       },
       "otherOpportunitiesDescription": {
-        "FOX": "Explorez les nombreuses possibilités pour fournir des liquidités, recourir au farming de rendement, prêter et d'emprunter. Cliquez sur les liens \"Commencer\" ci-dessous pour visiter les sites externes qui vous intéressent afin d'en apprendre davantage — et mettez votre FOX à votre service.",
-        "FOXy": "Achetez rapidement et facilement du FOXy, le premier jeton de rebasement DAO de l'industrie qui offre à la fois des récompenses de rendement et de profit."
+        "FURY": "Explorez les nombreuses possibilités pour fournir des liquidités, recourir au farming de rendement, prêter et d'emprunter. Cliquez sur les liens \"Commencer\" ci-dessous pour visiter les sites externes qui vous intéressent afin d'en apprendre davantage — et mettez votre FURY à votre service.",
+        "FURYy": "Achetez rapidement et facilement du FURYy, le premier jeton de rebasement DAO de l'industrie qui offre à la fois des récompenses de rendement et de profit."
       },
       "liquidityPools": "Pools de liquidité",
       "farming": "Farming",
       "borrowingAndLending": "Emprunter & prêter",
       "governanceTitle": "Gouvernance",
-      "governanceDescription": "En tant que détenteur de FOX, vous pouvez avoir votre mot à dire sur l'avenir de ShapeShift. Vous trouverez ci-dessous les propositions actives ou récemment adoptées de la DAO sur lesquelles les détenteurs de jetons votent.",
+      "governanceDescription": "En tant que détenteur de FURY, vous pouvez avoir votre mot à dire sur l'avenir de ShapeShift. Vous trouverez ci-dessous les propositions actives ou récemment adoptées de la DAO sur lesquelles les détenteurs de jetons votent.",
       "seeAllProposals": "Voir toutes les propositions",
       "availableToTradeOn": "Disponible pour les échanges sur",
       "dex": "DEX",
       "centralized": "Centralisé",
       "dappBack": {
-        "title": "✨ Récompenses en FOX et plus encore ! ✨",
-        "body": "Gagnez des récompenses en FOX en accomplissant des tâches sur DappBack",
+        "title": "✨ Récompenses en FURY et plus encore ! ✨",
+        "body": "Gagnez des récompenses en FURY en accomplissant des tâches sur DappBack",
         "cta": "Lancer DappBack"
       },
       "bondProtocol": {
-        "title": "Achetez de FOX à prix réduit !",
-        "body": "Achetez FOX à prix réduit avec BondProtocol",
+        "title": "Achetez de FURY à prix réduit !",
+        "body": "Achetez FURY à prix réduit avec BondProtocol",
         "cta": "Lancer BondProtocol"
       }
     },
@@ -1925,28 +1925,28 @@
     },
     "lp": {
       "title": "Fournisseurs de %{asset1}/%{asset2}",
-      "body": "Vous avez des %{asset1} et des %{asset2} ? Fournissez des liquidités au pool Uniswap V2 pour gagner %{apy} APR. DE PLUS, les FOX sous-jacents dans les jetons LP FOX/ETH que vous détenez se qualifieront pour l'Airdrop Areko.",
+      "body": "Vous avez des %{asset1} et des %{asset2} ? Fournissez des liquidités au pool Uniswap V2 pour gagner %{apy} APR. DE PLUS, les FURY sous-jacents dans les jetons LP FURY/ETH que vous détenez se qualifieront pour l'Airdrop Areko.",
       "cta": "Déposer des liquidités"
     },
-    "foxTokenHolders": {
-      "title": "Détenteurs de jetons FOX",
-      "body": "Hodler des jetons FOX. Plus votre poche est grande, plus votre Airdrop Arkeo est grand.",
-      "cta": "Échanger contre des FOX",
-      "secondary": "Acheter des FOX"
+    "furyTokenHolders": {
+      "title": "Détenteurs de jetons FURY",
+      "body": "Hodler des jetons FURY. Plus votre poche est grande, plus votre Airdrop Arkeo est grand.",
+      "cta": "Échanger contre des FURY",
+      "secondary": "Acheter des FURY"
     },
-    "foxFarmers": {
-      "title": "Farmeurs de LP FOX/ETH",
-      "body": "Gagnez jusqu'à %{apy} APR en misant vos jetons LP ETH/FOX dans la FOX Farm. DE PLUS, les FOX sous-jacents dans les jetons LP ETH/FOX que vous misez dans le Round 5 de la FOX Farm se qualifieront pour l'Airdrop Arkeo.",
-      "cta": "Miser des LP FOX/ETH"
+    "furyFarmers": {
+      "title": "Farmeurs de LP FURY/ETH",
+      "body": "Gagnez jusqu'à %{apy} APR en misant vos jetons LP ETH/FURY dans la FURY Farm. DE PLUS, les FURY sous-jacents dans les jetons LP ETH/FURY que vous misez dans le Round 5 de la FURY Farm se qualifieront pour l'Airdrop Arkeo.",
+      "cta": "Miser des LP FURY/ETH"
     },
-    "foxyTokenHolders": {
-      "title": "Détenteurs de jetons FOXy",
-      "body": "Gagnez jusqu'à %{apy} APR sur vos FOX inactifs avec FOX Yieldy (FOXy). DE PLUS, les FOXy détenus dans votre porte-monnaie seront traités de la même manière que des FOX et se qualifieront pour l'Airdrop Arkeo.",
-      "cta": "Miser des jetons FOX"
+    "jinxTokenHolders": {
+      "title": "Détenteurs de jetons FURYy",
+      "body": "Gagnez jusqu'à %{apy} APR sur vos FURY inactifs avec FURY Yieldy (FURYy). DE PLUS, les FURYy détenus dans votre porte-monnaie seront traités de la même manière que des FURY et se qualifieront pour l'Airdrop Arkeo.",
+      "cta": "Miser des jetons FURY"
     },
-    "foxEthProviders": {
-      "title": "LP de FOX/ETH sur Uniswap V2",
-      "body": "Vous avez %{asset1} et %{asset2} ? Fournissez des liquidités au pool Uniswap V2 pour gagner %{apy} APR. DE PLUS, les FOX sous-jacents dans les jetons LP FOX/ETH que vous détenez se qualifieront pour l'Airdrop Arkeo.",
+    "furyEthProviders": {
+      "title": "LP de FURY/ETH sur Uniswap V2",
+      "body": "Vous avez %{asset1} et %{asset2} ? Fournissez des liquidités au pool Uniswap V2 pour gagner %{apy} APR. DE PLUS, les FURY sous-jacents dans les jetons LP FURY/ETH que vous détenez se qualifieront pour l'Airdrop Arkeo.",
       "cta": "Déposer des liquidités"
     },
     "atomOsmoProviders": {
@@ -1973,7 +1973,7 @@
     }
   },
   "nft": {
-    "customizeFoxatar": "Personnaliser le FOXatar",
+    "customizeFuryatar": "Personnaliser le FURYatar",
     "setAsAvatar": "Définir comme avatar",
     "floorPrice": "Prix plancher",
     "lastPrice": "Dernier prix",
@@ -1992,7 +1992,7 @@
     "emptyBody": "Ne vous inquiétez pas, nous avons envoyé une équipe de recherche pour ramener plus de NFT incroyables. En attendant, n'hésitez pas à regarder cet espace vide et à réfléchir au sens de l'existence."
   },
   "missions": {
-    "subtitle": "Missions FOX",
+    "subtitle": "Missions FURY",
     "missionEnded": "Mission terminée",
     "viewMission": "Voir la mission",
     "comingSoon": "Prochainement",
@@ -2010,14 +2010,14 @@
       "subtitle": "Explorez Optimism",
       "cta": "Commencez la mission"
     },
-    "foxatar": {
+    "furyatar": {
       "title": "Obtenez un NFT gratuit et personnalisable",
-      "subtitle": "Mintez un FOXatar",
+      "subtitle": "Mintez un FURYatar",
       "cta": "Commencez la mission"
     },
-    "foxArmy": {
-      "subtitle": "Rejoignez l'armée FOX",
-      "title": "Cagnotte de 20 000 FOX",
+    "furyArmy": {
+      "subtitle": "Rejoignez l'armée FURY",
+      "title": "Cagnotte de 20 000 FURY",
       "cta": "Commencez la mission"
     },
     "yat": {
@@ -2030,9 +2030,9 @@
       "title": "Lancez une Mission pour votre projet",
       "cta": "Soumettez un projet"
     },
-    "foxRewards": {
+    "furyRewards": {
       "subtitle": "Achat, vente, échange, gains et plus encore",
-      "title": "Gagnez des FOX",
+      "title": "Gagnez des FURY",
       "cta": "Commencez la mission"
     }
   },

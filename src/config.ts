@@ -143,7 +143,7 @@ const validators = {
     default: 'https://snapshot.org/#/shapeshiftdao.eth',
   }),
   REACT_APP_FEATURE_MIXPANEL: bool({ default: false }),
-  REACT_APP_FEATURE_FOX_BOND_CTA: bool({ default: false }),
+  REACT_APP_FEATURE_FURY_BOND_CTA: bool({ default: false }),
   REACT_APP_FEATURE_DYNAMIC_LP_ASSETS: bool({ default: false }),
   REACT_APP_FEATURE_READ_ONLY_ASSETS: bool({ default: false }),
   REACT_APP_FEATURE_ONE_INCH: bool({ default: false }),

@@ -1,6 +1,6 @@
 import type { AccountId, AssetId, ChainNamespace, ChainReference } from '@shapeshiftoss/caip'
 import { toChainId } from '@shapeshiftoss/caip'
-import { getFoxPageRouteAssetId } from 'plugins/foxPage/utils/getFoxPageRouteAssetId'
+import { getFuryPageRouteAssetId } from 'plugins/furyPage/utils/getFuryPageRouteAssetId'
 import { useMemo } from 'react'
 import { matchPath, useLocation } from 'react-router'
 import { getChainAdapterManager } from 'context/PluginProvider/chainAdapterSingleton'
@@ -65,9 +65,9 @@ export const useRouteAssetId = () => {
 
   const assetId = useMemo(() => {
     const routeAssetId = getRouteAssetId(location.pathname)
-    const foxPageRouteAssetId = getFoxPageRouteAssetId(location.pathname)
+    const furyPageRouteAssetId = getFuryPageRouteAssetId(location.pathname)
 
-    return routeAssetId ?? foxPageRouteAssetId
+    return routeAssetId ?? furyPageRouteAssetId
   }, [location.pathname])
 
   return assetId

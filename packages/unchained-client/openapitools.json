@@ -70,6 +70,19 @@
           "useSingleRequestParameter": true
         }
       },
+      "merlins": {
+        "inputSpec": "https://raw.githubusercontent.com/shapeshift/unchained/develop/go/coinstacks/cosmos/api/swagger.json",
+        "generatorName": "typescript-fetch",
+        "output": "#{cwd}/src/generated/merlins",
+        "enablePostProcessFile": true,
+        "reservedWordsMappings": {
+          "in": "in"
+        },
+        "additionalProperties": {
+          "supportsES6": "true",
+          "useSingleRequestParameter": true
+        }
+      },
       "dogecoin": {
         "inputSpec": "https://raw.githubusercontent.com/shapeshift/unchained/develop/node/coinstacks/dogecoin/api/src/swagger.json",
         "generatorName": "typescript-fetch",
@@ -87,6 +100,19 @@
         "inputSpec": "https://raw.githubusercontent.com/shapeshift/unchained/develop/node/coinstacks/ethereum/api/src/swagger.json",
         "generatorName": "typescript-fetch",
         "output": "#{cwd}/src/generated/ethereum",
+        "enablePostProcessFile": true,
+        "reservedWordsMappings": {
+          "in": "in"
+        },
+        "additionalProperties": {
+          "supportsES6": "true",
+          "useSingleRequestParameter": true
+        }
+      },
+      "highbury": {
+        "inputSpec": "https://raw.githubusercontent.com/shapeshift/unchained/develop/node/coinstacks/ethereum/api/src/swagger.json",
+        "generatorName": "typescript-fetch",
+        "output": "#{cwd}/src/generated/highbury",
         "enablePostProcessFile": true,
         "reservedWordsMappings": {
           "in": "in"

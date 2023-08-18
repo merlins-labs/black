@@ -1,6 +1,6 @@
 # @shapeshiftoss/caip
 
-This package is ShapeShift's partial implementation of [CAIPs](https://github.com/ChainAgnostic/CAIPs) - Chain Agnostic Improvement Protocols.
+This package is 0x0eafe556aebc3fdd512006b78ed36990451fa3b8's partial implementation of [CAIPs](https://github.com/ChainAgnostic/CAIPs) - Chain Agnostic Improvement Protocols.
 It is not exhaustive and is currently only used internally.
 
 ## ChainId (CAIP2) - Blockchain ID Specification
@@ -83,9 +83,9 @@ const chainNamespace = CHAIN_NAMESPACE.Evm
 const chainReference = CHAIN_REFERENCE.EthereumMainnet
 const chainId = toChainId({ chainNamespace, chainReference })
 const assetNamespace = 'erc20'
-const assetReference = '0xc770eefad204b5180df6a14ee197d99d808ee52d'
-expect(toAssetId({ chainNamespace, chainReference, assetNamespace, assetReference })).toEqual('eip155:1/erc20:0xc770eefad204b5180df6a14ee197d99d808ee52d')
-expect(toAssetId({ chainId, assetNamespace, assetReference })).toEqual('eip155:1/erc20:0xc770eefad204b5180df6a14ee197d99d808ee52d')
+const assetReference = '0x3c3dc25ca709de108f6fc9b04bef5976876b05b1'
+expect(toAssetId({ chainNamespace, chainReference, assetNamespace, assetReference })).toEqual('eip155:1/erc20:0x3c3dc25ca709de108f6fc9b04bef5976876b05b1')
+expect(toAssetId({ chainId, assetNamespace, assetReference })).toEqual('eip155:1/erc20:0x3c3dc25ca709de108f6fc9b04bef5976876b05b1')
 ```
 
 ### `fromAssetId` | `fromCAIP19`
@@ -105,13 +105,13 @@ expect(assetReference).toEqual('60')
 ERC20 token
 
 ```ts
-const assetId = 'eip155:1/erc20:0xc770eefad204b5180df6a14ee197d99d808ee52d'
+const assetId = 'eip155:1/erc20:0x3c3dc25ca709de108f6fc9b04bef5976876b05b1'
 const { chainId, chainReference, chainNamespace, assetNamespace, assetReference } = fromAssetId(AssetId)
 expect(chainNamespace).toEqual('eip155')
 expect(chainReference).toEqual('1')
 expect(chainId).toEqual('eip155:1')
 expect(assetNamespace).toEqual('erc20')
-expect(assetReference).toEqual('0xc770eefad204b5180df6a14ee197d99d808ee52d')
+expect(assetReference).toEqual('0x3c3dc25ca709de108f6fc9b04bef5976876b05b1')
 ```
 
 ## Adapters
@@ -134,9 +134,9 @@ and commit the generated `adapter.json` files.
 ### Usage
 
 ```ts
-console.log(coingeckoToAssetIds('shapeshift-fox-token'))
+console.log(coingeckoToAssetIds('shapeshift-fury-token'))
 
-[eip155:1/erc20:0xc770eefad204b5180df6a14ee197d99d808ee52d]
+[eip155:1/erc20:0x3c3dc25ca709de108f6fc9b04bef5976876b05b1]
 
 console.log(assetIdToCoingecko('bip122:000000000019d6689c085ae165831e93/slip44:0'))
 

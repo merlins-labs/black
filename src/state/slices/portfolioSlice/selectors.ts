@@ -8,10 +8,10 @@ import {
   cosmosAssetId,
   dogeAssetId,
   ethAssetId,
-  foxyAssetId,
   fromAccountId,
   fromAssetId,
   gnosisAssetId,
+  jinxAssetId,
   ltcAssetId,
   optimismAssetId,
   osmosisAssetId,
@@ -71,8 +71,8 @@ import {
 } from '../common-selectors'
 import {
   DEFI_PROVIDER_TO_METADATA,
-  foxEthLpAssetId,
-  foxEthStakingIds,
+  furyEthLpAssetId,
+  furyEthStakingIds,
 } from '../opportunitiesSlice/constants'
 import { selectGetReadOnlyOpportunities } from '../opportunitiesSlice/selectors/readonly'
 import type { DefiProvider, StakingId, UserStakingId } from '../opportunitiesSlice/types'
@@ -196,10 +196,10 @@ export const selectPortfolioTotalUserCurrencyBalanceExcludeEarnDupes = createSel
     const readOnlyOpportunitiesDuplicates = Object.values(
       readOnlyOpportunities.data?.opportunities ?? {},
     ).map(opportunity => opportunity.assetId)
-    // ETH/FOX LP token, FOXy, and other held tokens can be both portfolio assets, but also part of DeFi opportunities
+    // ETH/FURY LP token, FURYy, and other held tokens can be both portfolio assets, but also part of DeFi opportunities
     // With the current architecture (having them both as portfolio assets and earn opportunities), we have to remove these two some place or another
     // This obviously won't scale as we support more LP tokens, but for now, this at least gives this deduction a sane home we can grep with `dupes` or `duplicates`
-    const portfolioEarnAssetIdsDuplicates = [foxEthLpAssetId, foxyAssetId].concat(
+    const portfolioEarnAssetIdsDuplicates = [furyEthLpAssetId, jinxAssetId].concat(
       readOnlyOpportunitiesDuplicates,
     )
     return Object.entries(portfolioUserCurrencyBalances)
@@ -252,7 +252,7 @@ export const selectFirstAccountIdByChainId = createCachedSelector(
 
 /**
  * selects portfolio account ids that *can* contain an assetId
- * e.g. we may be swapping into a new EVM account that does not necessarily contain FOX
+ * e.g. we may be swapping into a new EVM account that does not necessarily contain FURY
  * but can contain it
  */
 export const selectPortfolioAccountIdsByAssetId = createCachedSelector(
@@ -303,8 +303,8 @@ export const selectBalanceChartCryptoBalancesByAccountIdAboveThreshold =
         return acc
       }, cloneDeep(rawBalances))
       // TODO: add LP portfolio amount to this
-      const foxEthLpTotalBalancesIncludingDelegations = aggregatedEarnUserStakingOpportunities
-        ?.filter(opportunity => foxEthStakingIds.includes(opportunity.assetId as StakingId))
+      const furyEthLpTotalBalancesIncludingDelegations = aggregatedEarnUserStakingOpportunities
+        ?.filter(opportunity => furyEthStakingIds.includes(opportunity.assetId as StakingId))
         .reduce<BN>((acc: BN, opportunity) => {
           const asset = assetsById[opportunity.underlyingAssetId]
           return asset
@@ -314,8 +314,8 @@ export const selectBalanceChartCryptoBalancesByAccountIdAboveThreshold =
             : acc
         }, bn(0))
         .toFixed()
-      totalBalancesIncludingAllDelegationStates[foxEthLpAssetId] =
-        foxEthLpTotalBalancesIncludingDelegations
+      totalBalancesIncludingAllDelegationStates[furyEthLpAssetId] =
+        furyEthLpTotalBalancesIncludingDelegations
 
       const aboveThresholdBalances = Object.entries(
         totalBalancesIncludingAllDelegationStates,

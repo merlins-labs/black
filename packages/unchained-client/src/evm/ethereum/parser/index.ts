@@ -5,7 +5,7 @@ import * as erc20 from '../../parser/erc20'
 import * as nft from '../../parser/nft'
 import * as zrx from '../../parser/zrx'
 import * as cowswap from './cowswap'
-import * as foxy from './foxy'
+import * as jinx from './jinx'
 import * as thor from './thor'
 import * as uniV2 from './uniV2'
 import * as weth from './weth'
@@ -27,7 +27,7 @@ export class TransactionParser extends BaseTransactionParser<Tx> {
       }),
       new erc20.Parser({ chainId: this.chainId, provider: this.provider }),
       new yearn.Parser({ chainId: this.chainId }),
-      new foxy.Parser(),
+      new jinx.Parser(),
       new weth.Parser({ chainId: this.chainId, provider: this.provider }),
       new uniV2.Parser({ chainId: this.chainId, provider: this.provider }),
       new thor.Parser({ chainId: this.chainId, rpcUrl: args.rpcUrl }),

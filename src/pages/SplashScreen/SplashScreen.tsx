@@ -2,7 +2,7 @@ import { Center, Circle, Spinner } from '@chakra-ui/react'
 import { isFirefox } from 'react-device-detect'
 import Orbs from 'assets/orbs.svg'
 import OrbsStatic from 'assets/orbs-static.png'
-import { FoxIcon } from 'components/Icons/FoxIcon'
+import { FuryIcon } from 'components/Icons/FuryIcon'
 import { Page } from 'components/Layout/Page'
 import { colors } from 'theme/colors'
 
@@ -27,7 +27,7 @@ export const SplashScreen = () => {
         }}
       >
         <Circle size='100px' mb={6}>
-          <FoxIcon boxSize='100%' color='white' />
+          <FuryIcon boxSize='100%' color='white' />
         </Circle>
         <Spinner />
       </Center>

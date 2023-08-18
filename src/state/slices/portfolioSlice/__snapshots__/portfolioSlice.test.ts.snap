@@ -90,13 +90,13 @@ Object {
       "eip155:1:0x9a2d593725045d1727d525dd07a396f9ff079bb1": Object {
         "eip155:1/erc20:0x5f18c75abdae578b483e5f43f12a39cf75b973a9": "8178352",
         "eip155:1/erc20:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": "41208456",
-        "eip155:1/erc20:0xc770eefad204b5180df6a14ee197d99d808ee52d": "42729243327349401946",
+        "eip155:1/erc20:0x3c3dc25ca709de108f6fc9b04bef5976876b05b1": "42729243327349401946",
         "eip155:1/slip44:60": "27803816548287370",
       },
       "eip155:1:0xea674fdde714fd979de3edf0f56aa9716b898ec8": Object {
         "eip155:1/erc20:0x5f18c75abdae578b483e5f43f12a39cf75b973a9": "8178352",
         "eip155:1/erc20:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": "41208456",
-        "eip155:1/erc20:0xc770eefad204b5180df6a14ee197d99d808ee52d": "40729243327349401946",
+        "eip155:1/erc20:0x3c3dc25ca709de108f6fc9b04bef5976876b05b1": "40729243327349401946",
         "eip155:1/slip44:60": "23803816548287370",
       },
     },
@@ -120,7 +120,7 @@ Object {
       "eip155:1:0x9a2d593725045d1727d525dd07a396f9ff079bb1": Object {
         "assetIds": Array [
           "eip155:1/slip44:60",
-          "eip155:1/erc20:0xc770eefad204b5180df6a14ee197d99d808ee52d",
+          "eip155:1/erc20:0x3c3dc25ca709de108f6fc9b04bef5976876b05b1",
           "eip155:1/erc20:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
           "eip155:1/erc20:0x5f18c75abdae578b483e5f43f12a39cf75b973a9",
         ],
@@ -128,7 +128,7 @@ Object {
       "eip155:1:0xea674fdde714fd979de3edf0f56aa9716b898ec8": Object {
         "assetIds": Array [
           "eip155:1/slip44:60",
-          "eip155:1/erc20:0xc770eefad204b5180df6a14ee197d99d808ee52d",
+          "eip155:1/erc20:0x3c3dc25ca709de108f6fc9b04bef5976876b05b1",
           "eip155:1/erc20:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
           "eip155:1/erc20:0x5f18c75abdae578b483e5f43f12a39cf75b973a9",
         ],
@@ -157,7 +157,7 @@ Object {
       "eip155:1:0x6c8a778ef52e121b7dff1154c553662306a970e9": Object {
         "eip155:1/erc20:0x5f18c75abdae578b483e5f43f12a39cf75b973a9": "8178312",
         "eip155:1/erc20:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": "41208442",
-        "eip155:1/erc20:0xc770eefad204b5180df6a14ee197d99d808ee52d": "40729243327349401958",
+        "eip155:1/erc20:0x3c3dc25ca709de108f6fc9b04bef5976876b05b1": "40729243327349401958",
         "eip155:1/erc20:0xf0939011a9bb95c3b791f0cb546377ed2693a574": "4516126",
         "eip155:1/slip44:60": "23803816548287371",
       },
@@ -183,7 +183,7 @@ Object {
           "eip155:1/slip44:60",
           "eip155:1/erc20:0x5f18c75abdae578b483e5f43f12a39cf75b973a9",
           "eip155:1/erc20:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-          "eip155:1/erc20:0xc770eefad204b5180df6a14ee197d99d808ee52d",
+          "eip155:1/erc20:0x3c3dc25ca709de108f6fc9b04bef5976876b05b1",
           "eip155:1/erc20:0xf0939011a9bb95c3b791f0cb546377ed2693a574",
         ],
       },
@@ -205,7 +205,7 @@ Object {
   "accountBalances": Object {
     "byId": Object {
       "eip155:1:0x9a2d593725045d1727d525dd07a396f9ff079bb1": Object {
-        "eip155:1/erc20:0xc770eefad204b5180df6a14ee197d99d808ee52d": "1",
+        "eip155:1/erc20:0x3c3dc25ca709de108f6fc9b04bef5976876b05b1": "1",
         "eip155:1/slip44:60": "1000",
       },
     },
@@ -222,7 +222,7 @@ Object {
       "eip155:1:0x9a2d593725045d1727d525dd07a396f9ff079bb1": Object {
         "assetIds": Array [
           "eip155:1/slip44:60",
-          "eip155:1/erc20:0xc770eefad204b5180df6a14ee197d99d808ee52d",
+          "eip155:1/erc20:0x3c3dc25ca709de108f6fc9b04bef5976876b05b1",
         ],
       },
     },
@@ -242,7 +242,7 @@ Object {
   "accountBalances": Object {
     "byId": Object {
       "eip155:1:0x9a2d593725045d1727d525dd07a396f9ff079bb1": Object {
-        "eip155:1/erc20:0xc770eefad204b5180df6a14ee197d99d808ee52d": "1",
+        "eip155:1/erc20:0x3c3dc25ca709de108f6fc9b04bef5976876b05b1": "1",
         "eip155:1/slip44:60": "1000",
       },
       "eip155:1:0xea674fdde714fd979de3edf0f56aa9716b898ec8": Object {
@@ -264,7 +264,7 @@ Object {
       "eip155:1:0x9a2d593725045d1727d525dd07a396f9ff079bb1": Object {
         "assetIds": Array [
           "eip155:1/slip44:60",
-          "eip155:1/erc20:0xc770eefad204b5180df6a14ee197d99d808ee52d",
+          "eip155:1/erc20:0x3c3dc25ca709de108f6fc9b04bef5976876b05b1",
         ],
       },
       "eip155:1:0xea674fdde714fd979de3edf0f56aa9716b898ec8": Object {

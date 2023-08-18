@@ -1,5 +1,5 @@
 import type { AssetId } from '@shapeshiftoss/caip'
-import { ethAssetId, foxAssetId } from '@shapeshiftoss/caip'
+import { ethAssetId, furyAssetId } from '@shapeshiftoss/caip'
 import { mockStore } from 'test/mocks/store'
 import type {
   OpportunitiesState,
@@ -8,7 +8,7 @@ import type {
 } from 'state/slices/opportunitiesSlice/types'
 import { DefiProvider, DefiType } from 'state/slices/opportunitiesSlice/types'
 
-import { foxEthLpAssetId, foxEthPair, foxEthStakingAssetIdV5 } from '../constants'
+import { furyEthLpAssetId, furyEthPair, furyEthStakingAssetIdV5 } from '../constants'
 import {
   catpuccinoAccountId,
   fauxmesAccountId,
@@ -141,15 +141,15 @@ describe('opportunitiesSlice selectors', () => {
   describe('selectUserStakingOpportunityByUserStakingId', () => {
     const mockOpportunityMetadata: OpportunityMetadata = {
       // The LP token AssetId
-      assetId: foxEthLpAssetId,
-      id: foxEthLpAssetId,
-      name: 'ETH/FOX LP',
+      assetId: furyEthLpAssetId,
+      id: furyEthLpAssetId,
+      name: 'ETH/FURY LP',
       provider: DefiProvider.UniV2,
       tvl: '424242',
       apy: '0.42',
       type: DefiType.LiquidityPool,
-      underlyingAssetId: foxEthLpAssetId,
-      underlyingAssetIds: [foxAssetId, ethAssetId] as [AssetId, AssetId],
+      underlyingAssetId: furyEthLpAssetId,
+      underlyingAssetIds: [furyAssetId, ethAssetId] as [AssetId, AssetId],
       underlyingAssetRatiosBaseUnit: ['5000000000000000', '202200000000000000000'] as [
         string,
         string,
@@ -159,15 +159,15 @@ describe('opportunitiesSlice selectors', () => {
     }
     const mockOpportunityMetadataTwo: OpportunityMetadata = {
       // The LP token AssetId
-      assetId: foxEthStakingAssetIdV5,
-      id: foxEthStakingAssetIdV5 as OpportunityId,
-      name: 'ETH/FOX Farming',
-      provider: DefiProvider.EthFoxStaking,
+      assetId: furyEthStakingAssetIdV5,
+      id: furyEthStakingAssetIdV5 as OpportunityId,
+      name: 'ETH/FURY Farming',
+      provider: DefiProvider.EthFuryStaking,
       tvl: '424242',
       apy: '0.42',
       type: DefiType.Staking,
-      underlyingAssetId: foxEthLpAssetId,
-      underlyingAssetIds: [foxAssetId, ethAssetId] as [AssetId, AssetId],
+      underlyingAssetId: furyEthLpAssetId,
+      underlyingAssetIds: [furyAssetId, ethAssetId] as [AssetId, AssetId],
       underlyingAssetRatiosBaseUnit: ['5000000000000000', '202200000000000000000'] as [
         string,
         string,
@@ -228,18 +228,18 @@ describe('opportunitiesSlice selectors', () => {
         }),
       ).toEqual({
         apy: '0.42',
-        assetId: foxEthStakingAssetIdV5,
-        id: foxEthStakingAssetIdV5,
+        assetId: furyEthStakingAssetIdV5,
+        id: furyEthStakingAssetIdV5,
         userStakingId: 'eip155:1:0xgomes*eip155:1:0xStakingContractTwo',
-        name: 'ETH/FOX Farming',
-        provider: DefiProvider.EthFoxStaking,
+        name: 'ETH/FURY Farming',
+        provider: DefiProvider.EthFuryStaking,
         rewardsCryptoBaseUnit: { amounts: ['420000000000000000000'], claimable: true },
         stakedAmountCryptoBaseUnit: '1337',
         tvl: '424242',
         type: 'staking',
         underlyingAssetId: 'eip155:1/erc20:0x470e8de2ebaef52014a47cb5e6af86884947f08c',
         underlyingAssetIds: [
-          'eip155:1/erc20:0xc770eefad204b5180df6a14ee197d99d808ee52d',
+          'eip155:1/erc20:0x3c3dc25ca709de108f6fc9b04bef5976876b05b1',
           'eip155:1/slip44:60',
         ],
         underlyingAssetRatiosBaseUnit: ['5000000000000000', '202200000000000000000'],
@@ -255,7 +255,7 @@ describe('opportunitiesSlice selectors', () => {
         assetId: 'eip155:1/erc20:0x470e8de2ebaef52014a47cb5e6af86884947f08c',
         id: 'eip155:1/erc20:0x470e8de2ebaef52014a47cb5e6af86884947f08c',
         userStakingId: 'eip155:1:0xgomes*eip155:1:0xStakingContractOne',
-        name: 'ETH/FOX LP',
+        name: 'ETH/FURY LP',
         provider: DefiProvider.UniV2,
         stakedAmountCryptoBaseUnit: '4',
         rewardsCryptoBaseUnit: { amounts: ['3000000000000000000'] as [string], claimable: true },
@@ -263,7 +263,7 @@ describe('opportunitiesSlice selectors', () => {
         type: 'lp',
         underlyingAssetId: 'eip155:1/erc20:0x470e8de2ebaef52014a47cb5e6af86884947f08c',
         underlyingAssetIds: [
-          'eip155:1/erc20:0xc770eefad204b5180df6a14ee197d99d808ee52d',
+          'eip155:1/erc20:0x3c3dc25ca709de108f6fc9b04bef5976876b05b1',
           'eip155:1/slip44:60',
         ],
         underlyingAssetRatiosBaseUnit: ['5000000000000000', '202200000000000000000'],
@@ -279,18 +279,18 @@ describe('opportunitiesSlice selectors', () => {
         [mockStakingContractTwo]: {
           apy: '1000',
           assetId: mockStakingContractTwo,
-          name: 'FOX Farming',
+          name: 'FURY Farming',
           id: mockStakingContractTwo,
-          provider: DefiProvider.EthFoxStaking,
+          provider: DefiProvider.EthFuryStaking,
           tvl: '91283233211',
           type: DefiType.LiquidityPool,
-          underlyingAssetIds: foxEthPair,
-          underlyingAssetId: foxEthLpAssetId,
+          underlyingAssetIds: furyEthPair,
+          underlyingAssetId: furyEthLpAssetId,
           underlyingAssetRatiosBaseUnit: ['5000000000000000', '202200000000000000000'] as [
             string,
             string,
           ],
-          rewardAssetIds: [foxAssetId] as const,
+          rewardAssetIds: [furyAssetId] as const,
           isClaimableRewards: true,
         },
       },
@@ -344,12 +344,12 @@ describe('opportunitiesSlice selectors', () => {
           assetId: mockStakingContractTwo,
           id: mockStakingContractTwo,
           userStakingId: 'eip155:1:0xcatpuccino*eip155:1:0xStakingContractTwo',
-          name: 'FOX Farming',
-          provider: DefiProvider.EthFoxStaking,
+          name: 'FURY Farming',
+          provider: DefiProvider.EthFuryStaking,
           tvl: '91283233211',
           type: DefiType.LiquidityPool,
-          underlyingAssetId: foxEthLpAssetId,
-          underlyingAssetIds: foxEthPair,
+          underlyingAssetId: furyEthLpAssetId,
+          underlyingAssetIds: furyEthPair,
           underlyingAssetRatiosBaseUnit: ['5000000000000000', '202200000000000000000'] as [
             string,
             string,
@@ -358,7 +358,7 @@ describe('opportunitiesSlice selectors', () => {
             amounts: ['421000000000000000000'] as [string],
             claimable: true,
           },
-          rewardAssetIds: [foxAssetId],
+          rewardAssetIds: [furyAssetId],
           stakedAmountCryptoBaseUnit: '1437',
           undelegations: [],
           isClaimableRewards: true,

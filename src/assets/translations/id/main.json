@@ -153,12 +153,12 @@
           "learnMore": "Pelajari Lebih Lanjut "
         }
       },
-      "foxyOverview": {
-        "header": "Setor FOX untuk mendapatkan FOXy untuk menghasilkan",
-        "body": "FOXy adalah token rebasing yang dipatok dengan harga FOX. Staked FOX bekerja di berbagai protokol DeFi untuk mendapatkan hasil terbaik.",
+      "jinxOverview": {
+        "header": "Setor FURY untuk mendapatkan FURYy untuk menghasilkan",
+        "body": "FURYy adalah token rebasing yang dipatok dengan harga FURY. Staked FURY bekerja di berbagai protokol DeFi untuk mendapatkan hasil terbaik.",
         "rewards": "Imbalan yang Anda peroleh akan bertambah secara otomatis.",
-        "cta": "Setor FOX Sekarang ",
-        "foxyBalance": "Saldo FOXy",
+        "cta": "Setor FURY Sekarang ",
+        "jinxBalance": "Saldo FURYy",
         "withdrawals": "Penarikan",
         "emptyWithdraws": "Penarikan tertunda atau aktif akan ditampilkan di sini.",
         "availableDate": "tersedia %{date}"
@@ -271,7 +271,7 @@
     "overview": "Ringkasan ",
     "transactions": "Transaksi",
     "tradeHistory": "Sejarah Perdagangan",
-    "foxToken": "FOX Opportunities",
+    "furyToken": "FURY Opportunities",
     "featureFlags": "Fitur Bendera"
   },
   "transactionRow": {
@@ -312,7 +312,7 @@
       "thor": {
         "transferOut": "Transfer keluar"
       },
-      "foxy": {
+      "jinx": {
         "stake": "Stake",
         "unstake": "Unstake",
         "instantUnstake": "Unstake Instan",

@@ -3,14 +3,14 @@ import type { SwapSource } from 'lib/swapper/api'
 import { SwapperName } from 'lib/swapper/api'
 
 export const DEFAULT_SOURCE: SwapSource[] = [{ name: SwapperName.Zrx, proportion: '1' }]
-export const AFFILIATE_ADDRESS = '0xc770eefad204b5180df6a14ee197d99d808ee52d'
+export const AFFILIATE_ADDRESS = '0x3c3dc25ca709de108f6fc9b04bef5976876b05b1'
 export const OPTIMISM_L1_SWAP_GAS_LIMIT = '50000'
 
 // Zrx doesnt have an easily accessible master assets list.
 
 // We assume all erc20's are supported and remove these explicitely unsupported assets
 export const ZRX_UNSUPPORTED_ASSETS = Object.freeze([
-  // Foxy token unsupported by zrx
+  // Jinx token unsupported by zrx
   'eip155:1/erc20:0xdc49108ce5c57bc3408c3a5e95f3d864ec386ed3',
   /**
    * ERC20 RUNE - we don't want people buying this instead of native RUNE

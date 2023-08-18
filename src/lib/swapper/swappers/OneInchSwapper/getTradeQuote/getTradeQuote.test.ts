@@ -48,11 +48,11 @@ describe('getTradeQuote', () => {
             Ok({
               data: {
                 fromToken: {
-                  symbol: 'FOX',
-                  name: 'FOX',
+                  symbol: 'FURY',
+                  name: 'FURY',
                   decimals: 18,
-                  address: '0xc770eefad204b5180df6a14ee197d99d808ee52d',
-                  logoURI: 'https://tokens.1inch.io/0xc770eefad204b5180df6a14ee197d99d808ee52d.png',
+                  address: '0x3c3dc25ca709de108f6fc9b04bef5976876b05b1',
+                  logoURI: 'https://tokens.1inch.io/0x3c3dc25ca709de108f6fc9b04bef5976876b05b1.png',
                   tags: ['tokens'],
                 },
                 toToken: {
@@ -72,7 +72,7 @@ describe('getTradeQuote', () => {
                       {
                         name: 'UNISWAP_V2',
                         part: 100,
-                        fromTokenAddress: '0xc770eefad204b5180df6a14ee197d99d808ee52d',
+                        fromTokenAddress: '0x3c3dc25ca709de108f6fc9b04bef5976876b05b1',
                         toTokenAddress: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
                       },
                     ],

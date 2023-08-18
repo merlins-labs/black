@@ -2,7 +2,7 @@ import { Ok } from '@sniptt/monads'
 import { mockChainAdapters } from 'test/mocks/portfolio'
 
 import { DEFAULT_SLIPPAGE } from '../../../utils/constants'
-import { BTC, ETH, FOX_MAINNET, RUNE } from '../../../utils/test-data/assets'
+import { BTC, ETH, FURY_MAINNET, RUNE } from '../../../utils/test-data/assets'
 import type { ThornodeQuoteResponseSuccess } from '../../types'
 import { getInboundAddressDataForChain } from '../getInboundAddressDataForChain'
 import { getTradeRate, getTradeRateBelowMinimum } from '../getTradeRate/getTradeRate'
@@ -65,7 +65,7 @@ describe('getLimit', () => {
       Promise.resolve(mockOk(mockInboundAddresses.find(address => address.chain === 'ETH'))),
     )
     const getLimitArgs: GetLimitArgs = {
-      sellAsset: FOX_MAINNET,
+      sellAsset: FURY_MAINNET,
       buyAsset: BTC,
       sellAmountCryptoBaseUnit: '489830019000000000000',
       slippageTolerance: DEFAULT_SLIPPAGE,
@@ -96,7 +96,7 @@ describe('getLimit', () => {
       Promise.resolve(mockOk(mockInboundAddresses.find(address => address.chain === 'ETH'))),
     )
     const getLimitArgs: GetLimitArgs = {
-      sellAsset: FOX_MAINNET,
+      sellAsset: FURY_MAINNET,
       buyAsset: RUNE,
       sellAmountCryptoBaseUnit: '984229076000000000000',
       slippageTolerance: DEFAULT_SLIPPAGE,
@@ -128,17 +128,17 @@ describe('getLimit', () => {
     )
     const getLimitArgs: GetLimitArgs = {
       sellAsset: RUNE,
-      buyAsset: FOX_MAINNET,
+      buyAsset: FURY_MAINNET,
       sellAmountCryptoBaseUnit: '988381400',
       slippageTolerance: DEFAULT_SLIPPAGE,
       protocolFees: {
-        [FOX_MAINNET.assetId]: {
+        [FURY_MAINNET.assetId]: {
           amountCryptoBaseUnit: '65000000000',
           requiresBalance: false,
-          asset: FOX_MAINNET,
+          asset: FURY_MAINNET,
         },
       },
-      buyAssetUsdRate: '0.04', // buyAssetUsdRate (FOX)
+      buyAssetUsdRate: '0.04', // buyAssetUsdRate (FURY)
       feeAssetUsdRate: '14.51', // sellFeeAssetUsdRate (RUNE)
       thornodeQuote: {} as unknown as ThornodeQuoteResponseSuccess,
     }

@@ -10,7 +10,7 @@ import { swapperApi } from 'state/apis/swapper/swapperApi'
 import { abiApi } from './apis/abi/abiApi'
 import { covalentApi } from './apis/covalent/covalentApi'
 import { fiatRampApi } from './apis/fiatRamps/fiatRamps'
-import { foxyApi } from './apis/foxy/foxyApi'
+import { jinxApi } from './apis/jinx/jinxApi'
 import { nftApi } from './apis/nft/nftApi'
 import { swappersApi } from './apis/swappers/swappersApi'
 import { zapper, zapperApi } from './apis/zapper/zapperApi'
@@ -40,7 +40,7 @@ const apiMiddleware = [
   marketApi.middleware,
   assetApi.middleware,
   txHistoryApi.middleware,
-  foxyApi.middleware,
+  jinxApi.middleware,
   swapperApi.middleware,
   swappersApi.middleware,
   fiatRampApi.middleware,
